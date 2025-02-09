@@ -74,7 +74,6 @@
     .resume .base,
     .resume .func {
       box-sizing: border-box;
-      float: left;
     }
 
     .resume .base > div,
@@ -430,18 +429,20 @@
     .resume .func .skills-soft {
       clear: both;
       background: #283593;
-      padding: 15px;
-      margin: 15px 0 0;
+      padding: 10px;
+      margin: 10px 0 0;
     }
 
     .resume .func .skills-soft ul {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
       text-align: center;
     }
 
     .resume .func .skills-soft ul li {
       position: relative;
+      width: auto;
     }
 
     .resume .func .skills-soft ul li:hover svg .cbar {
@@ -531,7 +532,6 @@
       display: block;
     }
 
-
   </style>
 </head>
 <body>
@@ -558,11 +558,11 @@
       <div class="address"><a><i
         class="fas fa-map-marker"></i><span>Amman, Jordan</span></a>
       </div>
-      <div class="email"><a href="mailto:abdalrhmanalherbawi@gmail.com"><i
-        class="fas fa-envelope"></i><span>abdalrhmanalherbawi</span></a></div>
-      <div class="website"><a href="http://aherbawi.com/"
+      <div class="email"><a href="mailto:abdelrahman@alherbawi.work"><i
+        class="fas fa-envelope"></i><span>EMAIL</span></a></div>
+      <div class="website"><a href="#"
                               target="_blank"> <i class="fas
-                        fa-home"></i><span>aherbawi.com</span></a></div>
+                        fa-home"></i><span>Amman, Jordan</span></a></div>
     </div>
     <div class="follow">
       <h3>Follow Me</h3>
@@ -574,87 +574,11 @@
       </div>
     </div>
   </div>
+
   <div class="func">
-    <div class="work">
-      <h3><i class="fa fa-briefcase"></i>Experience</h3>
-      <ul>
-        <li><span>Technical Consultant -<br>Web
-                            Design</span><small>Fiserv</small><small>Apr 2018 - Now</small>
-        </li>
-        <li><span>Web Designer</span><small>Lynden</small><small>Jan 2018
-          - Apr 2018</small>
-        </li>
-        <li><span>Intern - Web
-                            Design</span><small>Lynden</small><small>Aug 2017 - Dec 2017</small>
-        </li>
-      </ul>
-    </div>
-    <div class="edu">
-      <h3><i class="fa fa-graduation-cap"></i>Education</h3>
-      <ul>
-        <li><span>Bachelor of Science<br>Web Design and
-                            Development</span><small>BYU-Idaho</small><small>Jan. 2016 - Apr.
-          2018</small>
-        </li>
-        <li><span>Computer Science</span><small>Edmonds Community
-          College</small><small>Sept. 2014 - Dec. 2015</small>
-        </li>
-        <li><span>High School</span><small>Henry M. Jackson High
-          School</small><small>Jan. 2013 - Jun. 2015</small>
-        </li>
-      </ul>
-    </div>
-    <div class="skills-prog">
-      <h3><i class="fas fa-code"></i>Programming Skills</h3>
-      <ul>
-        <li>
-          <span>HTML5</span>
-          <div class="skills-bar">
-            <div class="bar" style="width: 5%; transition-duration: 0.5s;"></div>
-          </div>
-        </li>
-        <li>
-          <span>HTML5</span>
-          <div class="skills-bar">
-            <div class="bar" style="width: 5%; transition-duration: 0.5s;"></div>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div class="skills-soft">
-      <h3><i class="fas fa-bezier-curve"></i>Software Skills</h3>
-      <ul>
-        <li data-percent="90">
-          <svg viewBox="0 0 100 100">
-            <circle cx="50" cy="50" r="45"></circle>
-            <circle class="cbar" cx="50" cy="50" r="45" style="stroke-dashoffset: 28.2743px; stroke-dasharray: 282.743px; transition-duration: 0.3s;"></circle>
-          </svg>
-          <span>Illustrator</span><small>90%</small>
-        </li>
-        <li data-percent="90">
-          <svg viewBox="0 0 100 100">
-            <circle cx="50" cy="50" r="45"></circle>
-            <circle class="cbar" cx="50" cy="50" r="45" style="stroke-dashoffset: 28.2743px; stroke-dasharray: 282.743px; transition-duration: 0.3s;"></circle>
-          </svg>
-          <span>Illustrator</span><small>90%</small>
-        </li>
-      </ul>
-    </div>
-    <div class="interests">
-      <h3><i class="fas fa-star"></i>Interests</h3>
-      <div class="interests-items">
-        <div class="art"><i class="fas
-                            fa-palette"></i><span>Art</span></div>
-        <div class="art"><i class="fas
-                            fa-book"></i><span>Books</span></div>
-        <div class="movies"><i class="fas
-                            fa-film"></i><span>Movies</span></div>
-        <div class="music"><i class="fas
-                            fa-headphones"></i><span>Music</span></div>
-        <div class="games"><i class="fas
-                            fa-gamepad"></i><span>Games</span></div>
-      </div>
-    </div>
+
+    <iframe src="HerbawiCV.docx.pdf" frameborder="0" style="height: 100%; width: 100%" ></iframe>
+
   </div>
 </div>
 </body>
