@@ -1,0 +1,1243 @@
+{
+  "data": [
+    {
+      "id": "f46e7d53-2357-4e2d-ae70-83edb4b8f69e",
+      "expires_at_date": "2027-07-08",
+      "issued_at_date": "2024-07-08",
+      "issued_to": "ABDEL RAHMAN ALHERBAWI",
+      "locale": "en",
+      "public": true,
+      "state": "accepted",
+      "translate_metadata": false,
+      "accepted_at": "2024-07-09T05:16:51.672+03:00",
+      "expires_at": "2027-07-08T03:00:00.000+03:00",
+      "issued_at": "2024-07-08T03:00:00.000+03:00",
+      "last_updated_at": "2024-07-09T05:16:51.673+03:00",
+      "updated_at": "2024-07-09T05:16:51.673+03:00",
+      "earner_path": "/users/abda616",
+      "earner_photo_url": null,
+      "is_private_badge": false,
+      "user_is_earner": false,
+      "printable": false,
+      "issuer": {
+        "summary": "issued by Amazon Web Services Training and Certification",
+        "entities": [
+          {
+            "label": "Issued by",
+            "primary": true,
+            "entity": {
+              "type": "Organization",
+              "id": "7b741b5c-231d-4925-8041-c64b6846f1c8",
+              "name": "Amazon Web Services Training and Certification",
+              "url": "https://www.credly.com/api/v1/organizations/7b741b5c-231d-4925-8041-c64b6846f1c8",
+              "vanity_url": "https://www.credly.com/org/amazon-web-services",
+              "internationalize_badge_templates": false,
+              "share_to_ziprecruiter": true,
+              "twitter_url": "https://twitter.com/awscloud",
+              "verified": false
+            }
+          }
+        ]
+      },
+      "badge_template": {
+        "id": "54225396-3c1a-44b6-ba14-9fe2f812842b",
+        "description": "Earners of this certification have a comprehensive understanding of AWS services and technologies. They demonstrated the ability to build secure and robust solutions using architectural design principles based on customer requirements. Badge owners are able to strategically design well-architected distributed systems that are scalable, resilient, efficient, and fault-tolerant.",
+        "global_activity_url": "https://aws.amazon.com/certification/certified-solutions-architect-associate/",
+        "earn_this_badge_url": null,
+        "enable_earn_this_badge": false,
+        "enable_detail_attribute_visibility": true,
+        "job_board_url": null,
+        "name": "AWS Certified Solutions Architect – Associate",
+        "public": true,
+        "recipient_type": "User",
+        "vanity_slug": "aws-certified-solutions-architect-associate",
+        "show_badge_lmi": true,
+        "show_skill_tag_links": true,
+        "settings_enable_related_badges": true,
+        "translatable": false,
+        "level": "Intermediate",
+        "time_to_earn": null,
+        "cost": null,
+        "type_category": "Certification",
+        "image": {
+          "id": "0e284c3f-5164-4b21-8660-0d84737941bc",
+          "url": "https://images.credly.com/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png"
+        },
+        "image_url": "https://images.credly.com/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png",
+        "url": "https://www.credly.com/org/amazon-web-services/badge/aws-certified-solutions-architect-associate",
+        "owner_vanity_slug": "amazon-web-services",
+        "badge_template_earnable": false,
+        "recommendable": true,
+        "issuer": {
+          "summary": "issued by Amazon Web Services Training and Certification",
+          "entities": [
+            {
+              "label": "Issued by",
+              "primary": true,
+              "entity": {
+                "type": "Organization",
+                "id": "7b741b5c-231d-4925-8041-c64b6846f1c8",
+                "name": "Amazon Web Services Training and Certification",
+                "url": "https://www.credly.com/api/v1/organizations/7b741b5c-231d-4925-8041-c64b6846f1c8",
+                "vanity_url": "https://www.credly.com/org/amazon-web-services",
+                "internationalize_badge_templates": false,
+                "share_to_ziprecruiter": true,
+                "twitter_url": "https://twitter.com/awscloud",
+                "verified": false
+              }
+            }
+          ]
+        },
+        "related_badge_templates": [
+          {
+            "id": "6b1c7b5a-d668-48a5-9dfd-e5de1c432c31",
+            "name": "AWS Certified Solutions Architect – Professional",
+            "image": {
+              "id": "2d84e428-9078-49b6-a804-13c15383d0de",
+              "url": "https://images.credly.com/images/2d84e428-9078-49b6-a804-13c15383d0de/image.png"
+            },
+            "image_url": "https://images.credly.com/images/2d84e428-9078-49b6-a804-13c15383d0de/image.png",
+            "url": "https://www.credly.com/org/amazon-web-services/badge/aws-certified-solutions-architect-professional"
+          },
+          {
+            "id": "6069fb52-0c27-42d7-852b-6aa86ea45e81",
+            "name": "AWS Certified Cloud Practitioner",
+            "image": {
+              "id": "00634f82-b07f-4bbd-a6bb-53de397fc3a6",
+              "url": "https://images.credly.com/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png"
+            },
+            "image_url": "https://images.credly.com/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png",
+            "url": "https://www.credly.com/org/amazon-web-services/badge/aws-certified-cloud-practitioner"
+          },
+          {
+            "id": "814f73aa-6ad7-4dea-8895-121134113997",
+            "name": "AWS Certified SysOps Administrator – Associate",
+            "image": {
+              "id": "f0d3fbb9-bfa7-4017-9989-7bde8eaf42b1",
+              "url": "https://images.credly.com/images/f0d3fbb9-bfa7-4017-9989-7bde8eaf42b1/image.png"
+            },
+            "image_url": "https://images.credly.com/images/f0d3fbb9-bfa7-4017-9989-7bde8eaf42b1/image.png",
+            "url": "https://www.credly.com/org/amazon-web-services/badge/aws-certified-sysops-administrator-associate"
+          }
+        ],
+        "alignments": [],
+        "badge_template_activities": [
+          {
+            "id": "e1d83b85-adce-4c50-acc6-13701b0fc0df",
+            "activity_type": "Assessment",
+            "required_badge_template_id": null,
+            "title": "Successfully passed the AWS Certified Solutions Architect – Associate exam.",
+            "url": null
+          }
+        ],
+        "endorsements": [],
+        "skills": [
+          {
+            "id": "682d4927-14e7-490c-96d3-c8f3ef0995de",
+            "name": "AWS",
+            "vanity_slug": "aws"
+          },
+          {
+            "id": "87f75c05-6cff-4044-b641-f871a1ea345a",
+            "name": "Amazon Web Services",
+            "vanity_slug": "amazon-web-services"
+          },
+          {
+            "id": "d787423d-a2c2-4515-953d-52a42e946fd9",
+            "name": "Cloud Infrastructure",
+            "vanity_slug": "cloud-infrastructure"
+          },
+          {
+            "id": "d914920b-ba3e-4220-9b51-957642f3104a",
+            "name": "AWS Certification",
+            "vanity_slug": "aws-certification"
+          },
+          {
+            "id": "c42a5758-3258-4516-9188-5b019ddd1241",
+            "name": "Cloud Certification",
+            "vanity_slug": "cloud-certification"
+          },
+          {
+            "id": "918edc32-0894-4957-a91f-d96300b8b8d3",
+            "name": "AWS Cloud",
+            "vanity_slug": "aws-cloud"
+          },
+          {
+            "id": "abfd0cf0-7586-4cb8-9f23-0398da99a4cb",
+            "name": "Cloud Architecture",
+            "vanity_slug": "cloud-architecture"
+          },
+          {
+            "id": "37229bc7-1a4e-478d-b834-17402ba02862",
+            "name": "Cloud Data",
+            "vanity_slug": "cloud-data"
+          },
+          {
+            "id": "f056df54-cafe-4713-bdc5-d4ac6734d76c",
+            "name": "Cloud Services",
+            "vanity_slug": "cloud-services"
+          }
+        ]
+      },
+      "image": {
+        "id": "0e284c3f-5164-4b21-8660-0d84737941bc",
+        "url": "https://images.credly.com/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png"
+      },
+      "image_url": "https://images.credly.com/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png",
+      "evidence": [],
+      "recommendations": []
+    },
+
+    {
+      "id": "764b1388-e628-428d-ae7f-62317522470c",
+      "expires_at_date": null,
+      "issued_at_date": "2024-04-12",
+      "issued_to": "ABDEL RAHMAN NAFEZ ALHERBAWI",
+      "locale": "en",
+      "public": true,
+      "state": "accepted",
+      "translate_metadata": false,
+      "accepted_at": "2024-04-12T08:00:10.699+03:00",
+      "expires_at": null,
+      "issued_at": "2024-04-12T08:00:06.000+03:00",
+      "last_updated_at": "2024-04-12T08:00:10.713+03:00",
+      "updated_at": "2024-05-11T17:44:31.087+03:00",
+      "earner_path": "/users/abda616",
+      "earner_photo_url": null,
+      "is_private_badge": false,
+      "user_is_earner": false,
+      "printable": false,
+      "issuer": {
+        "summary": "issued by Amazon Web Services Training and Certification",
+        "entities": [
+          {
+            "label": "Issued by",
+            "primary": true,
+            "entity": {
+              "type": "Organization",
+              "id": "7b741b5c-231d-4925-8041-c64b6846f1c8",
+              "name": "Amazon Web Services Training and Certification",
+              "url": "https://www.credly.com/api/v1/organizations/7b741b5c-231d-4925-8041-c64b6846f1c8",
+              "vanity_url": "https://www.credly.com/org/amazon-web-services",
+              "internationalize_badge_templates": false,
+              "share_to_ziprecruiter": true,
+              "twitter_url": "https://twitter.com/awscloud",
+              "verified": false
+            }
+          }
+        ]
+      },
+      "badge_template": {
+        "id": "31acd145-19cf-48a8-8789-a060dd0aee81",
+        "description": "Earners of this badge have completed the AWS re/Start program. AWS re/Start is a skills development and job training program that prepares learners for careers in the cloud. Each cohort, supported by professional mentors and accredited trainers, completes training featuring real-world scenario-based learning, hands-on labs, and coursework.",
+        "global_activity_url": "https://aws.amazon.com/training/restart/",
+        "earn_this_badge_url": null,
+        "enable_earn_this_badge": false,
+        "enable_detail_attribute_visibility": true,
+        "job_board_url": null,
+        "name": "AWS re/Start Graduate",
+        "public": true,
+        "recipient_type": "User",
+        "vanity_slug": "aws-re-start-graduate",
+        "show_badge_lmi": true,
+        "show_skill_tag_links": true,
+        "settings_enable_related_badges": false,
+        "translatable": false,
+        "level": null,
+        "time_to_earn": null,
+        "cost": null,
+        "type_category": "Learning",
+        "image": {
+          "id": "44e2c252-5d19-4574-9646-005f7225bf53",
+          "url": "https://images.credly.com/images/44e2c252-5d19-4574-9646-005f7225bf53/image.png"
+        },
+        "image_url": "https://images.credly.com/images/44e2c252-5d19-4574-9646-005f7225bf53/image.png",
+        "url": "https://www.credly.com/org/amazon-web-services/badge/aws-re-start-graduate",
+        "owner_vanity_slug": "amazon-web-services",
+        "badge_template_earnable": false,
+        "recommendable": true,
+        "issuer": {
+          "summary": "issued by Amazon Web Services Training and Certification",
+          "entities": [
+            {
+              "label": "Issued by",
+              "primary": true,
+              "entity": {
+                "type": "Organization",
+                "id": "7b741b5c-231d-4925-8041-c64b6846f1c8",
+                "name": "Amazon Web Services Training and Certification",
+                "url": "https://www.credly.com/api/v1/organizations/7b741b5c-231d-4925-8041-c64b6846f1c8",
+                "vanity_url": "https://www.credly.com/org/amazon-web-services",
+                "internationalize_badge_templates": false,
+                "share_to_ziprecruiter": true,
+                "twitter_url": "https://twitter.com/awscloud",
+                "verified": false
+              }
+            }
+          ]
+        },
+        "related_badge_templates": [],
+        "alignments": [],
+        "badge_template_activities": [
+          {
+            "id": "c86926e3-c19c-4894-b45f-d7b6ded00ec8",
+            "activity_type": "Education Experience",
+            "required_badge_template_id": null,
+            "title": "Completion of rigorous IT Fundamentals, AWS Cloud, and professional skills job training course.",
+            "url": "https://aws.amazon.com/training/restart/"
+          }
+        ],
+        "endorsements": [],
+        "skills": [
+          {
+            "id": "87f75c05-6cff-4044-b641-f871a1ea345a",
+            "name": "Amazon Web Services",
+            "vanity_slug": "amazon-web-services"
+          },
+          {
+            "id": "f056df54-cafe-4713-bdc5-d4ac6734d76c",
+            "name": "Cloud Services",
+            "vanity_slug": "cloud-services"
+          },
+          {
+            "id": "f468a452-e13e-4ca4-ae58-f4131989f1fe",
+            "name": "Cloud Platform",
+            "vanity_slug": "cloud-platform"
+          },
+          {
+            "id": "a90660ef-acf8-4e50-bed5-1923d82b58b7",
+            "name": "AWS Cloud Computing",
+            "vanity_slug": "aws-cloud-computing"
+          },
+          {
+            "id": "918edc32-0894-4957-a91f-d96300b8b8d3",
+            "name": "AWS Cloud",
+            "vanity_slug": "aws-cloud"
+          }
+        ]
+      },
+      "image": {
+        "id": "44e2c252-5d19-4574-9646-005f7225bf53",
+        "url": "https://images.credly.com/images/44e2c252-5d19-4574-9646-005f7225bf53/image.png"
+      },
+      "image_url": "https://images.credly.com/images/44e2c252-5d19-4574-9646-005f7225bf53/image.png",
+      "evidence": [],
+      "recommendations": []
+    },
+
+    {
+      "id": "979fcb18-63a8-4e3a-baae-2279010ef4fc",
+      "expires_at_date": null,
+      "issued_at_date": "2023-10-11",
+      "issued_to": "ABDEL RAHMAN ALHERBAWI",
+      "locale": "en",
+      "public": true,
+      "state": "accepted",
+      "translate_metadata": false,
+      "accepted_at": "2023-10-11T11:28:28.460+03:00",
+      "expires_at": null,
+      "issued_at": "2023-10-11T11:28:28.000+03:00",
+      "last_updated_at": "2023-10-11T11:28:28.498+03:00",
+      "updated_at": "2023-10-11T11:28:28.498+03:00",
+      "earner_path": "/users/abda616",
+      "earner_photo_url": null,
+      "is_private_badge": false,
+      "user_is_earner": false,
+      "printable": true,
+      "issuer": {
+        "summary": "issued by Cisco",
+        "entities": [
+          {
+            "label": "Issued by",
+            "primary": true,
+            "entity": {
+              "type": "Organization",
+              "id": "74381078-44ac-4581-8471-36bd1ce495b7",
+              "name": "Cisco",
+              "url": "https://www.credly.com/api/v1/organizations/74381078-44ac-4581-8471-36bd1ce495b7",
+              "vanity_url": "https://www.credly.com/org/cisco",
+              "internationalize_badge_templates": false,
+              "share_to_ziprecruiter": true,
+              "twitter_url": "https://twitter.com/learningatcisco",
+              "verified": false
+            }
+          }
+        ]
+      },
+      "badge_template": {
+        "id": "0baa91ac-75e1-4405-a408-272d6560573d",
+        "description": "Cisco verifies the earner of this badge successfully completed the Enterprise Networking, Security and Automation course and achieved this student level credential. The earner has a foundation in scalable network architectures, dynamic routing, mitigation of security threats, wide-area networks, virtualization, automation of programmable networks. Earner participated in up to 41 lab activities and accumulated up to 15 hours of hands-on labs using Cisco hardware and/or Cisco Packet Tracer tool.",
+        "global_activity_url": "https://www.netacad.com/courses/ccna-enterprise-networking-security-automation",
+        "earn_this_badge_url": "https://www.netacad.com/courses/ccna-enterprise-networking-security-automation",
+        "enable_earn_this_badge": true,
+        "enable_detail_attribute_visibility": true,
+        "job_board_url": null,
+        "name": "CCNA: Enterprise Networking, Security, and Automation",
+        "public": true,
+        "recipient_type": "User",
+        "vanity_slug": "ccna-enterprise-networking-security-and-automation",
+        "show_badge_lmi": true,
+        "show_skill_tag_links": true,
+        "settings_enable_related_badges": true,
+        "translatable": false,
+        "level": null,
+        "time_to_earn": null,
+        "cost": null,
+        "type_category": null,
+        "image": {
+          "id": "0a6d331e-8abf-4272-a949-33f754569a76",
+          "url": "https://images.credly.com/images/0a6d331e-8abf-4272-a949-33f754569a76/CCNAENSA__1_.png"
+        },
+        "image_url": "https://images.credly.com/images/0a6d331e-8abf-4272-a949-33f754569a76/CCNAENSA__1_.png",
+        "url": "https://www.credly.com/org/cisco/badge/ccna-enterprise-networking-security-and-automation",
+        "owner_vanity_slug": "cisco",
+        "badge_template_earnable": true,
+        "recommendable": true,
+        "issuer": {
+          "summary": "issued by Cisco",
+          "entities": [
+            {
+              "label": "Issued by",
+              "primary": true,
+              "entity": {
+                "type": "Organization",
+                "id": "74381078-44ac-4581-8471-36bd1ce495b7",
+                "name": "Cisco",
+                "url": "https://www.credly.com/api/v1/organizations/74381078-44ac-4581-8471-36bd1ce495b7",
+                "vanity_url": "https://www.credly.com/org/cisco",
+                "internationalize_badge_templates": false,
+                "share_to_ziprecruiter": true,
+                "twitter_url": "https://twitter.com/learningatcisco",
+                "verified": false
+              }
+            }
+          ]
+        },
+        "related_badge_templates": [
+          {
+            "id": "746da060-8ab8-4f2f-8e3e-dfa82b16ee3b",
+            "name": "Securing Networks with Cisco Firepower Next Generation Firewall",
+            "image": {
+              "id": "6c458729-e72b-4f96-94e9-b132e7254b13",
+              "url": "https://images.credly.com/images/6c458729-e72b-4f96-94e9-b132e7254b13/CV_PNG_L300.png"
+            },
+            "image_url": "https://images.credly.com/images/6c458729-e72b-4f96-94e9-b132e7254b13/CV_PNG_L300.png",
+            "url": "https://www.credly.com/org/cisco/badge/securing-networks-with-cisco-firepower-next-generation-firewall"
+          },
+          {
+            "id": "844d353f-9fbc-456d-ab26-e8f9c92ed5b6",
+            "name": "Cisco Certified Internetwork Expert Data Center (CCIE Data Center) - Emeritus",
+            "image": {
+              "id": "9b46c852-3f97-4ad5-aa8f-044bcc95fb6d",
+              "url": "https://images.credly.com/images/9b46c852-3f97-4ad5-aa8f-044bcc95fb6d/ccie_emeritus.png"
+            },
+            "image_url": "https://images.credly.com/images/9b46c852-3f97-4ad5-aa8f-044bcc95fb6d/ccie_emeritus.png",
+            "url": "https://www.credly.com/org/cisco/badge/cisco-certified-internetwork-expert-data-center-ccie-data-center-emeritus"
+          },
+          {
+            "id": "1b1aae72-ba67-481c-91cf-1bc617330b9e",
+            "name": "Implementing and Operating Cisco Enterprise Network Core Technologies",
+            "image": {
+              "id": "82a9a54a-b8ee-4d5a-9de5-2c68c07748b7",
+              "url": "https://images.credly.com/images/82a9a54a-b8ee-4d5a-9de5-2c68c07748b7/CV_PNG_L300.png"
+            },
+            "image_url": "https://images.credly.com/images/82a9a54a-b8ee-4d5a-9de5-2c68c07748b7/CV_PNG_L300.png",
+            "url": "https://www.credly.com/org/cisco/badge/implementing-and-operating-cisco-enterprise-network-core-technologies"
+          }
+        ],
+        "alignments": [],
+        "badge_template_activities": [
+          {
+            "id": "d3ba554a-35c1-4036-99ba-e4d072d6895d",
+            "activity_type": "Course",
+            "required_badge_template_id": null,
+            "title": "Passing grade from Networking Academy instructor",
+            "url": null
+          },
+          {
+            "id": "1cceef07-b75d-4758-952f-81b4276e21b9",
+            "activity_type": "Assessment",
+            "required_badge_template_id": null,
+            "title": "Passing score on final exam.",
+            "url": null
+          }
+        ],
+        "endorsements": [],
+        "skills": [
+          {
+            "id": "b0957b01-63cd-4af0-abd0-f3899c7df6fc",
+            "name": "Network Automation Basics",
+            "vanity_slug": "network-automation-basics"
+          },
+          {
+            "id": "ea2999d1-b8f0-4df6-8497-7c15ba189105",
+            "name": "Quality Of Service (QoS)",
+            "vanity_slug": "quality-of-service-qos"
+          },
+          {
+            "id": "88f56174-1487-4caa-908b-ed7a894147ed",
+            "name": "Security Threat Mitigation",
+            "vanity_slug": "security-threat-mitigation"
+          },
+          {
+            "id": "6c0d281a-c49c-4c5d-89a4-804442735f15",
+            "name": "Software Driven Networks",
+            "vanity_slug": "software-driven-networks"
+          },
+          {
+            "id": "35abc0ba-fd68-400c-a55f-e3fce62267b6",
+            "name": "Virtualization",
+            "vanity_slug": "virtualization"
+          },
+          {
+            "id": "7ab35a2d-a22f-4036-a0db-861530bb9340",
+            "name": "Wide Area Networks",
+            "vanity_slug": "wide-area-networks"
+          },
+          {
+            "id": "45326b46-06c8-4c35-9992-284f410a88ad",
+            "name": "Dynamic Routing",
+            "vanity_slug": "dynamic-routing"
+          },
+          {
+            "id": "22301fdb-fb7a-4f9a-bf5c-432a04379b7b",
+            "name": "Network Address Translation (NAT)",
+            "vanity_slug": "network-address-translation-nat"
+          }
+        ]
+      },
+      "image": {
+        "id": "0a6d331e-8abf-4272-a949-33f754569a76",
+        "url": "https://images.credly.com/images/0a6d331e-8abf-4272-a949-33f754569a76/CCNAENSA__1_.png"
+      },
+      "image_url": "https://images.credly.com/images/0a6d331e-8abf-4272-a949-33f754569a76/CCNAENSA__1_.png",
+      "evidence": [],
+      "recommendations": []
+    },
+
+    {
+      "id": "26f9a5e4-ef6c-48ca-8680-4b1689286d0e",
+      "expires_at_date": null,
+      "issued_at_date": "2023-08-21",
+      "issued_to": "ABDEL RAHMAN ALHERBAWI",
+      "locale": "en",
+      "public": true,
+      "state": "accepted",
+      "translate_metadata": false,
+      "accepted_at": "2023-08-22T14:45:50.179+03:00",
+      "expires_at": null,
+      "issued_at": "2023-08-21T10:35:33.000+03:00",
+      "last_updated_at": "2023-08-22T14:45:50.179+03:00",
+      "updated_at": "2023-08-22T14:45:50.191+03:00",
+      "earner_path": "/users/abda616",
+      "earner_photo_url": null,
+      "is_private_badge": false,
+      "user_is_earner": false,
+      "printable": true,
+      "issuer": {
+        "summary": "issued by Cisco",
+        "entities": [
+          {
+            "label": "Issued by",
+            "primary": true,
+            "entity": {
+              "type": "Organization",
+              "id": "74381078-44ac-4581-8471-36bd1ce495b7",
+              "name": "Cisco",
+              "url": "https://www.credly.com/api/v1/organizations/74381078-44ac-4581-8471-36bd1ce495b7",
+              "vanity_url": "https://www.credly.com/org/cisco",
+              "internationalize_badge_templates": false,
+              "share_to_ziprecruiter": true,
+              "twitter_url": "https://twitter.com/learningatcisco",
+              "verified": false
+            }
+          }
+        ]
+      },
+      "badge_template": {
+        "id": "227dafde-5f07-4968-ae2f-75e8246f85b3",
+        "description": "Cisco verifies the earner of this badge successfully completed the Introduction to Networks course and achieved this student level credential. Earner has knowledge of networking including IP addressing, how physical, data link protocols support Ethernet, can configure connectivity between switches, routers and end devices to provide access to local and remote resources. Earner participated in up to 54 labs and accumulated up to 14 hours of hands-on labs using Cisco hardware or Packet Tracer tool",
+        "global_activity_url": "https://www.netacad.com/courses/ccna-introduction-networks",
+        "earn_this_badge_url": "https://www.netacad.com/courses/ccna-introduction-networks",
+        "enable_earn_this_badge": true,
+        "enable_detail_attribute_visibility": true,
+        "job_board_url": null,
+        "name": "CCNA: Introduction to Networks",
+        "public": true,
+        "recipient_type": "User",
+        "vanity_slug": "ccna-introduction-to-networks",
+        "show_badge_lmi": false,
+        "show_skill_tag_links": true,
+        "settings_enable_related_badges": true,
+        "translatable": false,
+        "level": null,
+        "time_to_earn": null,
+        "cost": null,
+        "type_category": null,
+        "image": {
+          "id": "70d71df5-f3dc-4380-9b9d-f22513a70417",
+          "url": "https://images.credly.com/images/70d71df5-f3dc-4380-9b9d-f22513a70417/CCNAITN__1_.png"
+        },
+        "image_url": "https://images.credly.com/images/70d71df5-f3dc-4380-9b9d-f22513a70417/CCNAITN__1_.png",
+        "url": "https://www.credly.com/org/cisco/badge/ccna-introduction-to-networks",
+        "owner_vanity_slug": "cisco",
+        "badge_template_earnable": true,
+        "recommendable": true,
+        "issuer": {
+          "summary": "issued by Cisco",
+          "entities": [
+            {
+              "label": "Issued by",
+              "primary": true,
+              "entity": {
+                "type": "Organization",
+                "id": "74381078-44ac-4581-8471-36bd1ce495b7",
+                "name": "Cisco",
+                "url": "https://www.credly.com/api/v1/organizations/74381078-44ac-4581-8471-36bd1ce495b7",
+                "vanity_url": "https://www.credly.com/org/cisco",
+                "internationalize_badge_templates": false,
+                "share_to_ziprecruiter": true,
+                "twitter_url": "https://twitter.com/learningatcisco",
+                "verified": false
+              }
+            }
+          ]
+        },
+        "related_badge_templates": [
+          {
+            "id": "6de80a6f-176c-4103-93a6-1452e0bce6d1",
+            "name": "Implementing and Administering Cisco Solutions",
+            "image": {
+              "id": "05524143-bc28-42f3-a52e-b231335e8cd2",
+              "url": "https://images.credly.com/images/05524143-bc28-42f3-a52e-b231335e8cd2/CV_PNG_L200.png"
+            },
+            "image_url": "https://images.credly.com/images/05524143-bc28-42f3-a52e-b231335e8cd2/CV_PNG_L200.png",
+            "url": "https://www.credly.com/org/cisco/badge/implementing-and-administering-cisco-solutions"
+          },
+          {
+            "id": "59876d7c-8286-4186-b234-5afc23d51b06",
+            "name": "CCNA",
+            "image": {
+              "id": "683783d8-eaac-4c37-a14d-11bd8a36321d",
+              "url": "https://images.credly.com/images/683783d8-eaac-4c37-a14d-11bd8a36321d/ccna_600.png"
+            },
+            "image_url": "https://images.credly.com/images/683783d8-eaac-4c37-a14d-11bd8a36321d/ccna_600.png",
+            "url": "https://www.credly.com/org/cisco/badge/ccna"
+          },
+          {
+            "id": "536ef37d-511f-460e-93d4-d005c40f645b",
+            "name": "CCNP: Advanced Routing",
+            "image": {
+              "id": "3bb1a127-e4e4-47ac-b83f-6a9fbf343f00",
+              "url": "https://images.credly.com/images/3bb1a127-e4e4-47ac-b83f-6a9fbf343f00/CCNP_ENARSI.png"
+            },
+            "image_url": "https://images.credly.com/images/3bb1a127-e4e4-47ac-b83f-6a9fbf343f00/CCNP_ENARSI.png",
+            "url": "https://www.credly.com/org/cisco/badge/ccnp-advanced-routing"
+          }
+        ],
+        "alignments": [],
+        "badge_template_activities": [
+          {
+            "id": "7b53361a-bde1-49bc-a9af-36ccc5d38e1b",
+            "activity_type": "Assessment",
+            "required_badge_template_id": null,
+            "title": "Passing score on final exam.",
+            "url": null
+          },
+          {
+            "id": "02f492ed-6101-4a40-b17a-6683c0c6c12b",
+            "activity_type": "Course",
+            "required_badge_template_id": null,
+            "title": "Passing grade from Networking Academy instructor",
+            "url": null
+          }
+        ],
+        "endorsements": [],
+        "skills": [
+          {
+            "id": "dac27569-a11b-4ecc-898f-638646239bcb",
+            "name": "Network Fundamentals",
+            "vanity_slug": "network-fundamentals"
+          },
+          {
+            "id": "8b8d393d-c75e-4827-a4cf-643901fc1fc0",
+            "name": "IPv4 And IPv6 Addressing",
+            "vanity_slug": "ipv4-and-ipv6-addressing"
+          },
+          {
+            "id": "a2940a45-7a44-4423-a658-dfd74113b8c8",
+            "name": "IP Subnetting",
+            "vanity_slug": "ip-subnetting"
+          },
+          {
+            "id": "26f6670e-a84e-4db3-8c04-cbf2a446a89b",
+            "name": "IP services",
+            "vanity_slug": "ip-services"
+          },
+          {
+            "id": "83a97f3d-be60-44ed-a18f-81a67b69d7e2",
+            "name": "IP connectivity",
+            "vanity_slug": "ip-connectivity"
+          },
+          {
+            "id": "a2d93de8-c1dc-41f2-b417-cf55a6394fa3",
+            "name": "Ethernet",
+            "vanity_slug": "ethernet"
+          },
+          {
+            "id": "65441856-3335-4251-a063-a4a6c8275021",
+            "name": "Switching",
+            "vanity_slug": "switching"
+          },
+          {
+            "id": "9479873a-4a3a-49b1-afc9-34298f582761",
+            "name": "Security Fundamentals",
+            "vanity_slug": "security-fundamentals"
+          }
+        ]
+      },
+      "image": {
+        "id": "70d71df5-f3dc-4380-9b9d-f22513a70417",
+        "url": "https://images.credly.com/images/70d71df5-f3dc-4380-9b9d-f22513a70417/CCNAITN__1_.png"
+      },
+      "image_url": "https://images.credly.com/images/70d71df5-f3dc-4380-9b9d-f22513a70417/CCNAITN__1_.png",
+      "evidence": [],
+      "recommendations": []
+    },
+
+    {
+      "id": "6bc70ff4-a78b-480b-bf31-71bfcc167613",
+      "expires_at_date": null,
+      "issued_at_date": "2023-09-03",
+      "issued_to": "ABDEL RAHMAN ALHERBAWI",
+      "locale": "en",
+      "public": true,
+      "state": "accepted",
+      "translate_metadata": false,
+      "accepted_at": "2023-09-03T16:52:40.002+03:00",
+      "expires_at": null,
+      "issued_at": "2023-09-03T16:52:39.000+03:00",
+      "last_updated_at": "2023-09-03T16:52:40.017+03:00",
+      "updated_at": "2023-09-03T16:52:40.017+03:00",
+      "earner_path": "/users/abda616",
+      "earner_photo_url": null,
+      "is_private_badge": false,
+      "user_is_earner": false,
+      "printable": true,
+      "issuer": {
+        "summary": "issued by Cisco",
+        "entities": [
+          {
+            "label": "Issued by",
+            "primary": true,
+            "entity": {
+              "type": "Organization",
+              "id": "74381078-44ac-4581-8471-36bd1ce495b7",
+              "name": "Cisco",
+              "url": "https://www.credly.com/api/v1/organizations/74381078-44ac-4581-8471-36bd1ce495b7",
+              "vanity_url": "https://www.credly.com/org/cisco",
+              "internationalize_badge_templates": false,
+              "share_to_ziprecruiter": true,
+              "twitter_url": "https://twitter.com/learningatcisco",
+              "verified": false
+            }
+          }
+        ]
+      },
+      "badge_template": {
+        "id": "f86a6163-7d66-4e8d-9ea6-f75bfc215b2e",
+        "description": "Cisco verifies the earner of this badge successfully completed the Switching, Routing, and Wireless Essentials course and achieved this student level credential. The earner has a foundation in switching operations, wired and wireless LAN configuration using security best practices, redundancy protocols, and developed problem-solving skills. Earner participated in up to 45 practice activities and accumulated up to 21 hours of hands-on labs using Cisco hardware and/or the Cisco Packet Tracer tool.",
+        "global_activity_url": "https://www.netacad.com/courses/ccna-switching-routing-wireless-essentials",
+        "earn_this_badge_url": "https://www.netacad.com/courses/ccna-switching-routing-wireless-essentials",
+        "enable_earn_this_badge": true,
+        "enable_detail_attribute_visibility": true,
+        "job_board_url": null,
+        "name": "CCNA: Switching, Routing, and Wireless Essentials",
+        "public": true,
+        "recipient_type": "User",
+        "vanity_slug": "ccna-switching-routing-and-wireless-essentials.1",
+        "show_badge_lmi": false,
+        "show_skill_tag_links": true,
+        "settings_enable_related_badges": true,
+        "translatable": false,
+        "level": null,
+        "time_to_earn": null,
+        "cost": null,
+        "type_category": null,
+        "image": {
+          "id": "f4ccdba9-dd65-4349-baad-8f05df116443",
+          "url": "https://images.credly.com/images/f4ccdba9-dd65-4349-baad-8f05df116443/CCNASRWE__1_.png"
+        },
+        "image_url": "https://images.credly.com/images/f4ccdba9-dd65-4349-baad-8f05df116443/CCNASRWE__1_.png",
+        "url": "https://www.credly.com/org/cisco/badge/ccna-switching-routing-and-wireless-essentials.1",
+        "owner_vanity_slug": "cisco",
+        "badge_template_earnable": true,
+        "recommendable": true,
+        "issuer": {
+          "summary": "issued by Cisco",
+          "entities": [
+            {
+              "label": "Issued by",
+              "primary": true,
+              "entity": {
+                "type": "Organization",
+                "id": "74381078-44ac-4581-8471-36bd1ce495b7",
+                "name": "Cisco",
+                "url": "https://www.credly.com/api/v1/organizations/74381078-44ac-4581-8471-36bd1ce495b7",
+                "vanity_url": "https://www.credly.com/org/cisco",
+                "internationalize_badge_templates": false,
+                "share_to_ziprecruiter": true,
+                "twitter_url": "https://twitter.com/learningatcisco",
+                "verified": false
+              }
+            }
+          ]
+        },
+        "related_badge_templates": [
+          {
+            "id": "b174a23e-a353-4e99-b081-b4f116d547d0",
+            "name": "CCNP: Core Networking",
+            "image": {
+              "id": "8b0ca811-bd98-4083-ba50-512ab9f6262b",
+              "url": "https://images.credly.com/images/8b0ca811-bd98-4083-ba50-512ab9f6262b/CCNPENCOR__1_.png"
+            },
+            "image_url": "https://images.credly.com/images/8b0ca811-bd98-4083-ba50-512ab9f6262b/CCNPENCOR__1_.png",
+            "url": "https://www.credly.com/org/cisco/badge/ccnp-core-networking"
+          },
+          {
+            "id": "6de80a6f-176c-4103-93a6-1452e0bce6d1",
+            "name": "Implementing and Administering Cisco Solutions",
+            "image": {
+              "id": "05524143-bc28-42f3-a52e-b231335e8cd2",
+              "url": "https://images.credly.com/images/05524143-bc28-42f3-a52e-b231335e8cd2/CV_PNG_L200.png"
+            },
+            "image_url": "https://images.credly.com/images/05524143-bc28-42f3-a52e-b231335e8cd2/CV_PNG_L200.png",
+            "url": "https://www.credly.com/org/cisco/badge/implementing-and-administering-cisco-solutions"
+          },
+          {
+            "id": "59876d7c-8286-4186-b234-5afc23d51b06",
+            "name": "CCNA",
+            "image": {
+              "id": "683783d8-eaac-4c37-a14d-11bd8a36321d",
+              "url": "https://images.credly.com/images/683783d8-eaac-4c37-a14d-11bd8a36321d/ccna_600.png"
+            },
+            "image_url": "https://images.credly.com/images/683783d8-eaac-4c37-a14d-11bd8a36321d/ccna_600.png",
+            "url": "https://www.credly.com/org/cisco/badge/ccna"
+          }
+        ],
+        "alignments": [],
+        "badge_template_activities": [
+          {
+            "id": "a017a9da-310a-4ec8-947e-3e3c8a20b5e8",
+            "activity_type": "Assessment",
+            "required_badge_template_id": null,
+            "title": "Passing score on final exam.",
+            "url": null
+          },
+          {
+            "id": "b51c4aef-a713-4e6c-93e5-35c92313511a",
+            "activity_type": "Course",
+            "required_badge_template_id": null,
+            "title": "Passing grade from Networking Academy instructor",
+            "url": null
+          }
+        ],
+        "endorsements": [],
+        "skills": [
+          {
+            "id": "3e73cf88-fc76-43c2-84a3-3acdb1042419",
+            "name": "Access Connectivity",
+            "vanity_slug": "access-connectivity"
+          },
+          {
+            "id": "bb51a76f-c8b8-4f89-bbf7-4687ca2406d2",
+            "name": "Routing",
+            "vanity_slug": "routing"
+          },
+          {
+            "id": "26f6670e-a84e-4db3-8c04-cbf2a446a89b",
+            "name": "IP services",
+            "vanity_slug": "ip-services"
+          },
+          {
+            "id": "7de6bbe4-514f-4eb9-a546-87ff28725af4",
+            "name": "High Availability",
+            "vanity_slug": "high-availability"
+          },
+          {
+            "id": "7b64eff5-52fc-4d5a-a4cd-03bd04cca428",
+            "name": "First-hop Redundancy",
+            "vanity_slug": "first-hop-redundancy"
+          },
+          {
+            "id": "bbf47db7-ade9-452d-98f9-af6dce012a2a",
+            "name": "Access Security",
+            "vanity_slug": "access-security"
+          },
+          {
+            "id": "0b2fca2a-5a11-419a-9531-65240d297919",
+            "name": "Switching Protocols",
+            "vanity_slug": "switching-protocols"
+          },
+          {
+            "id": "2df9991e-e529-4c5d-a24a-688a0d2f9380",
+            "name": "Wireless LAN Controllers",
+            "vanity_slug": "wireless-lan-controllers"
+          }
+        ]
+      },
+      "image": {
+        "id": "f4ccdba9-dd65-4349-baad-8f05df116443",
+        "url": "https://images.credly.com/images/f4ccdba9-dd65-4349-baad-8f05df116443/CCNASRWE__1_.png"
+      },
+      "image_url": "https://images.credly.com/images/f4ccdba9-dd65-4349-baad-8f05df116443/CCNASRWE__1_.png",
+      "evidence": [],
+      "recommendations": []
+    },
+
+    {
+      "id": "828f8da1-a151-4be4-ab7b-8879e028dd7b",
+      "expires_at_date": "2027-07-08",
+      "issued_at_date": "2024-04-03",
+      "issued_to": "ABDEL RAHMAN ALHERBAWI",
+      "locale": "en",
+      "public": true,
+      "state": "accepted",
+      "translate_metadata": false,
+      "accepted_at": "2024-04-03T22:42:16.480+03:00",
+      "expires_at": "2027-07-08T03:00:00.000+03:00",
+      "issued_at": "2024-04-03T03:00:00.000+03:00",
+      "last_updated_at": "2024-07-09T05:16:51.301+03:00",
+      "updated_at": "2024-07-09T05:16:51.301+03:00",
+      "earner_path": "/users/abda616",
+      "earner_photo_url": null,
+      "is_private_badge": false,
+      "user_is_earner": false,
+      "printable": false,
+      "issuer": {
+        "summary": "issued by Amazon Web Services Training and Certification",
+        "entities": [
+          {
+            "label": "Issued by",
+            "primary": true,
+            "entity": {
+              "type": "Organization",
+              "id": "7b741b5c-231d-4925-8041-c64b6846f1c8",
+              "name": "Amazon Web Services Training and Certification",
+              "url": "https://www.credly.com/api/v1/organizations/7b741b5c-231d-4925-8041-c64b6846f1c8",
+              "vanity_url": "https://www.credly.com/org/amazon-web-services",
+              "internationalize_badge_templates": false,
+              "share_to_ziprecruiter": true,
+              "twitter_url": "https://twitter.com/awscloud",
+              "verified": false
+            }
+          }
+        ]
+      },
+      "badge_template": {
+        "id": "6069fb52-0c27-42d7-852b-6aa86ea45e81",
+        "description": "Earners of this certification have a fundamental understanding of IT services and their uses in the AWS Cloud. They demonstrated cloud fluency and foundational AWS knowledge. Badge owners are able to identify essential AWS services necessary to set up AWS-focused projects.",
+        "global_activity_url": "https://aws.amazon.com/certification/certified-cloud-practitioner/",
+        "earn_this_badge_url": null,
+        "enable_earn_this_badge": false,
+        "enable_detail_attribute_visibility": true,
+        "job_board_url": null,
+        "name": "AWS Certified Cloud Practitioner",
+        "public": true,
+        "recipient_type": "User",
+        "vanity_slug": "aws-certified-cloud-practitioner",
+        "show_badge_lmi": true,
+        "show_skill_tag_links": true,
+        "settings_enable_related_badges": true,
+        "translatable": false,
+        "level": "Foundational",
+        "time_to_earn": null,
+        "cost": null,
+        "type_category": "Certification",
+        "image": {
+          "id": "00634f82-b07f-4bbd-a6bb-53de397fc3a6",
+          "url": "https://images.credly.com/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png"
+        },
+        "image_url": "https://images.credly.com/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png",
+        "url": "https://www.credly.com/org/amazon-web-services/badge/aws-certified-cloud-practitioner",
+        "owner_vanity_slug": "amazon-web-services",
+        "badge_template_earnable": false,
+        "recommendable": true,
+        "issuer": {
+          "summary": "issued by Amazon Web Services Training and Certification",
+          "entities": [
+            {
+              "label": "Issued by",
+              "primary": true,
+              "entity": {
+                "type": "Organization",
+                "id": "7b741b5c-231d-4925-8041-c64b6846f1c8",
+                "name": "Amazon Web Services Training and Certification",
+                "url": "https://www.credly.com/api/v1/organizations/7b741b5c-231d-4925-8041-c64b6846f1c8",
+                "vanity_url": "https://www.credly.com/org/amazon-web-services",
+                "internationalize_badge_templates": false,
+                "share_to_ziprecruiter": true,
+                "twitter_url": "https://twitter.com/awscloud",
+                "verified": false
+              }
+            }
+          ]
+        },
+        "related_badge_templates": [
+          {
+            "id": "54225396-3c1a-44b6-ba14-9fe2f812842b",
+            "name": "AWS Certified Solutions Architect – Associate",
+            "image": {
+              "id": "0e284c3f-5164-4b21-8660-0d84737941bc",
+              "url": "https://images.credly.com/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png"
+            },
+            "image_url": "https://images.credly.com/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png",
+            "url": "https://www.credly.com/org/amazon-web-services/badge/aws-certified-solutions-architect-associate"
+          },
+          {
+            "id": "6b1c7b5a-d668-48a5-9dfd-e5de1c432c31",
+            "name": "AWS Certified Solutions Architect – Professional",
+            "image": {
+              "id": "2d84e428-9078-49b6-a804-13c15383d0de",
+              "url": "https://images.credly.com/images/2d84e428-9078-49b6-a804-13c15383d0de/image.png"
+            },
+            "image_url": "https://images.credly.com/images/2d84e428-9078-49b6-a804-13c15383d0de/image.png",
+            "url": "https://www.credly.com/org/amazon-web-services/badge/aws-certified-solutions-architect-professional"
+          },
+          {
+            "id": "20f61a9f-06ff-43ad-ada3-b553e0189295",
+            "name": "AWS Certified Data Engineer – Associate",
+            "image": {
+              "id": "e5c85d7f-4e50-431e-b5af-fa9d9b0596e7",
+              "url": "https://images.credly.com/images/e5c85d7f-4e50-431e-b5af-fa9d9b0596e7/image.png"
+            },
+            "image_url": "https://images.credly.com/images/e5c85d7f-4e50-431e-b5af-fa9d9b0596e7/image.png",
+            "url": "https://www.credly.com/org/amazon-web-services/badge/aws-certified-data-engineer-associate"
+          }
+        ],
+        "alignments": [],
+        "badge_template_activities": [
+          {
+            "id": "0120445d-cc83-4cbd-8e43-19fc7d025d35",
+            "activity_type": "Assessment",
+            "required_badge_template_id": null,
+            "title": "Successfully passed the AWS Certified Cloud Practitioner exam.",
+            "url": null
+          }
+        ],
+        "endorsements": [],
+        "skills": [
+          {
+            "id": "682d4927-14e7-490c-96d3-c8f3ef0995de",
+            "name": "AWS",
+            "vanity_slug": "aws"
+          },
+          {
+            "id": "f468a452-e13e-4ca4-ae58-f4131989f1fe",
+            "name": "Cloud Platform",
+            "vanity_slug": "cloud-platform"
+          },
+          {
+            "id": "f056df54-cafe-4713-bdc5-d4ac6734d76c",
+            "name": "Cloud Services",
+            "vanity_slug": "cloud-services"
+          },
+          {
+            "id": "918edc32-0894-4957-a91f-d96300b8b8d3",
+            "name": "AWS Cloud",
+            "vanity_slug": "aws-cloud"
+          },
+          {
+            "id": "c42a5758-3258-4516-9188-5b019ddd1241",
+            "name": "Cloud Certification",
+            "vanity_slug": "cloud-certification"
+          },
+          {
+            "id": "d914920b-ba3e-4220-9b51-957642f3104a",
+            "name": "AWS Certification",
+            "vanity_slug": "aws-certification"
+          },
+          {
+            "id": "f8e4fd7f-3cf6-40bd-95a0-b832e21c2f8f",
+            "name": "Cloud Computing",
+            "vanity_slug": "cloud-computing"
+          },
+          {
+            "id": "87f75c05-6cff-4044-b641-f871a1ea345a",
+            "name": "Amazon Web Services",
+            "vanity_slug": "amazon-web-services"
+          }
+        ]
+      },
+      "image": {
+        "id": "00634f82-b07f-4bbd-a6bb-53de397fc3a6",
+        "url": "https://images.credly.com/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png"
+      },
+      "image_url": "https://images.credly.com/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png",
+      "evidence": [],
+      "recommendations": []
+    },
+
+    {
+      "id": "af9abbb6-9f37-4346-9e47-ba4d4d0e7ff9",
+      "expires_at_date": null,
+      "issued_at_date": "2024-05-07",
+      "issued_to": "ABDEL RAHMAN",
+      "locale": "en",
+      "public": true,
+      "state": "accepted",
+      "translate_metadata": false,
+      "accepted_at": "2024-05-11T16:33:47.795+03:00",
+      "expires_at": null,
+      "issued_at": "2024-05-07T03:00:00.000+03:00",
+      "last_updated_at": "2024-05-11T16:33:47.795+03:00",
+      "updated_at": "2024-05-11T16:33:47.795+03:00",
+      "earner_path": "/users/abda616",
+      "earner_photo_url": null,
+      "is_private_badge": false,
+      "user_is_earner": false,
+      "printable": false,
+      "issuer": {
+        "summary": "issued by Amazon Web Services Training and Certification",
+        "entities": [
+          {
+            "label": "Issued by",
+            "primary": true,
+            "entity": {
+              "type": "Organization",
+              "id": "7b741b5c-231d-4925-8041-c64b6846f1c8",
+              "name": "Amazon Web Services Training and Certification",
+              "url": "https://www.credly.com/api/v1/organizations/7b741b5c-231d-4925-8041-c64b6846f1c8",
+              "vanity_url": "https://www.credly.com/org/amazon-web-services",
+              "internationalize_badge_templates": false,
+              "share_to_ziprecruiter": true,
+              "twitter_url": "https://twitter.com/awscloud",
+              "verified": false
+            }
+          }
+        ]
+      },
+      "badge_template": {
+        "id": "8ff373f9-82be-4e7f-870b-558e98cefb28",
+        "description": "Earners of this badge are AWS Partners who have developed fundamental, technical knowledge of AWS cloud computing, global infrastructure, services, solutions, migration and security.",
+        "global_activity_url": "https://aws.amazon.com/partners/training/course-descriptions/",
+        "earn_this_badge_url": null,
+        "enable_earn_this_badge": false,
+        "enable_detail_attribute_visibility": true,
+        "job_board_url": null,
+        "name": "AWS Partner: Technical Accredited",
+        "public": true,
+        "recipient_type": "User",
+        "vanity_slug": "aws-partner-technical-accredited",
+        "show_badge_lmi": false,
+        "show_skill_tag_links": false,
+        "settings_enable_related_badges": true,
+        "translatable": false,
+        "level": null,
+        "time_to_earn": null,
+        "cost": null,
+        "type_category": "Learning",
+        "image": {
+          "id": "a253b994-caa6-4dd1-bf0e-434dd012b1f6",
+          "url": "https://images.credly.com/images/a253b994-caa6-4dd1-bf0e-434dd012b1f6/image.png"
+        },
+        "image_url": "https://images.credly.com/images/a253b994-caa6-4dd1-bf0e-434dd012b1f6/image.png",
+        "url": "https://www.credly.com/org/amazon-web-services/badge/aws-partner-technical-accredited",
+        "owner_vanity_slug": "amazon-web-services",
+        "badge_template_earnable": false,
+        "recommendable": true,
+        "issuer": {
+          "summary": "issued by Amazon Web Services Training and Certification",
+          "entities": [
+            {
+              "label": "Issued by",
+              "primary": true,
+              "entity": {
+                "type": "Organization",
+                "id": "7b741b5c-231d-4925-8041-c64b6846f1c8",
+                "name": "Amazon Web Services Training and Certification",
+                "url": "https://www.credly.com/api/v1/organizations/7b741b5c-231d-4925-8041-c64b6846f1c8",
+                "vanity_url": "https://www.credly.com/org/amazon-web-services",
+                "internationalize_badge_templates": false,
+                "share_to_ziprecruiter": true,
+                "twitter_url": "https://twitter.com/awscloud",
+                "verified": false
+              }
+            }
+          ]
+        },
+        "related_badge_templates": [
+          {
+            "id": "17f867df-3e05-42c9-8f4d-0e8a920b27d1",
+            "name": "AWS Partner: Sales Accreditation",
+            "image": {
+              "id": "87df3ac8-1afb-4bdc-80ee-bef9f8cb65d6",
+              "url": "https://images.credly.com/images/87df3ac8-1afb-4bdc-80ee-bef9f8cb65d6/image.png"
+            },
+            "image_url": "https://images.credly.com/images/87df3ac8-1afb-4bdc-80ee-bef9f8cb65d6/image.png",
+            "url": "https://www.credly.com/org/amazon-web-services/badge/aws-partner-sales-accreditation"
+          },
+          {
+            "id": "20f61a9f-06ff-43ad-ada3-b553e0189295",
+            "name": "AWS Certified Data Engineer – Associate",
+            "image": {
+              "id": "e5c85d7f-4e50-431e-b5af-fa9d9b0596e7",
+              "url": "https://images.credly.com/images/e5c85d7f-4e50-431e-b5af-fa9d9b0596e7/image.png"
+            },
+            "image_url": "https://images.credly.com/images/e5c85d7f-4e50-431e-b5af-fa9d9b0596e7/image.png",
+            "url": "https://www.credly.com/org/amazon-web-services/badge/aws-certified-data-engineer-associate"
+          }
+        ],
+        "alignments": [],
+        "badge_template_activities": [
+          {
+            "id": "b3b231fc-cddc-4284-a470-9ae9ad0d5481",
+            "activity_type": "Assessment",
+            "required_badge_template_id": null,
+            "title": "Successfully pass the AWS Partner: Accreditation (Technical) assessment",
+            "url": "https://partnercentral.awspartner.com/LmsSsoRedirect?RelayState=%2flearningobject%2fwbc%3fid%3d43176"
+          }
+        ],
+        "endorsements": [],
+        "skills": [
+          {
+            "id": "87f75c05-6cff-4044-b641-f871a1ea345a",
+            "name": "Amazon Web Services",
+            "vanity_slug": "amazon-web-services"
+          },
+          {
+            "id": "918edc32-0894-4957-a91f-d96300b8b8d3",
+            "name": "AWS Cloud",
+            "vanity_slug": "aws-cloud"
+          },
+          {
+            "id": "a90660ef-acf8-4e50-bed5-1923d82b58b7",
+            "name": "AWS Cloud Computing",
+            "vanity_slug": "aws-cloud-computing"
+          },
+          {
+            "id": "2b727469-9877-4ab3-b8df-915d7f28ee50",
+            "name": "AWS Partner",
+            "vanity_slug": "aws-partner"
+          }
+        ]
+      },
+      "image": {
+        "id": "a253b994-caa6-4dd1-bf0e-434dd012b1f6",
+        "url": "https://images.credly.com/images/a253b994-caa6-4dd1-bf0e-434dd012b1f6/image.png"
+      },
+      "image_url": "https://images.credly.com/images/a253b994-caa6-4dd1-bf0e-434dd012b1f6/image.png",
+      "evidence": [],
+      "recommendations": []
+    }
+  ],
+  "metadata": {
+    "count": 7,
+    "current_page": 1,
+    "total_count": 7,
+    "total_pages": 1,
+    "per": 48,
+    "previous_page_url": null,
+    "next_page_url": null
+  }
+}
