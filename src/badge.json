@@ -189,6 +189,189 @@
     },
 
     {
+      "id": "828f8da1-a151-4be4-ab7b-8879e028dd7b",
+      "expires_at_date": "2027-07-08",
+      "issued_at_date": "2024-04-03",
+      "issued_to": "ABDEL RAHMAN ALHERBAWI",
+      "locale": "en",
+      "public": true,
+      "state": "accepted",
+      "translate_metadata": false,
+      "accepted_at": "2024-04-03T22:42:16.480+03:00",
+      "expires_at": "2027-07-08T03:00:00.000+03:00",
+      "issued_at": "2024-04-03T03:00:00.000+03:00",
+      "last_updated_at": "2024-07-09T05:16:51.301+03:00",
+      "updated_at": "2024-07-09T05:16:51.301+03:00",
+      "earner_path": "/users/abda616",
+      "earner_photo_url": null,
+      "is_private_badge": false,
+      "user_is_earner": false,
+      "printable": false,
+      "issuer": {
+        "summary": "issued by Amazon Web Services Training and Certification",
+        "entities": [
+          {
+            "label": "Issued by",
+            "primary": true,
+            "entity": {
+              "type": "Organization",
+              "id": "7b741b5c-231d-4925-8041-c64b6846f1c8",
+              "name": "Amazon Web Services Training and Certification",
+              "url": "https://www.credly.com/api/v1/organizations/7b741b5c-231d-4925-8041-c64b6846f1c8",
+              "vanity_url": "https://www.credly.com/org/amazon-web-services",
+              "internationalize_badge_templates": false,
+              "share_to_ziprecruiter": true,
+              "twitter_url": "https://twitter.com/awscloud",
+              "verified": false
+            }
+          }
+        ]
+      },
+      "badge_template": {
+        "id": "6069fb52-0c27-42d7-852b-6aa86ea45e81",
+        "description": "Earners of this certification have a fundamental understanding of IT services and their uses in the AWS Cloud. They demonstrated cloud fluency and foundational AWS knowledge. Badge owners are able to identify essential AWS services necessary to set up AWS-focused projects.",
+        "global_activity_url": "https://aws.amazon.com/certification/certified-cloud-practitioner/",
+        "earn_this_badge_url": null,
+        "enable_earn_this_badge": false,
+        "enable_detail_attribute_visibility": true,
+        "job_board_url": null,
+        "name": "AWS Certified Cloud Practitioner",
+        "public": true,
+        "recipient_type": "User",
+        "vanity_slug": "aws-certified-cloud-practitioner",
+        "show_badge_lmi": true,
+        "show_skill_tag_links": true,
+        "settings_enable_related_badges": true,
+        "translatable": false,
+        "level": "Foundational",
+        "time_to_earn": null,
+        "cost": null,
+        "type_category": "Certification",
+        "image": {
+          "id": "00634f82-b07f-4bbd-a6bb-53de397fc3a6",
+          "url": "https://images.credly.com/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png"
+        },
+        "image_url": "https://images.credly.com/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png",
+        "url": "https://www.credly.com/org/amazon-web-services/badge/aws-certified-cloud-practitioner",
+        "owner_vanity_slug": "amazon-web-services",
+        "badge_template_earnable": false,
+        "recommendable": true,
+        "issuer": {
+          "summary": "issued by Amazon Web Services Training and Certification",
+          "entities": [
+            {
+              "label": "Issued by",
+              "primary": true,
+              "entity": {
+                "type": "Organization",
+                "id": "7b741b5c-231d-4925-8041-c64b6846f1c8",
+                "name": "Amazon Web Services Training and Certification",
+                "url": "https://www.credly.com/api/v1/organizations/7b741b5c-231d-4925-8041-c64b6846f1c8",
+                "vanity_url": "https://www.credly.com/org/amazon-web-services",
+                "internationalize_badge_templates": false,
+                "share_to_ziprecruiter": true,
+                "twitter_url": "https://twitter.com/awscloud",
+                "verified": false
+              }
+            }
+          ]
+        },
+        "related_badge_templates": [
+          {
+            "id": "54225396-3c1a-44b6-ba14-9fe2f812842b",
+            "name": "AWS Certified Solutions Architect – Associate",
+            "image": {
+              "id": "0e284c3f-5164-4b21-8660-0d84737941bc",
+              "url": "https://images.credly.com/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png"
+            },
+            "image_url": "https://images.credly.com/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png",
+            "url": "https://www.credly.com/org/amazon-web-services/badge/aws-certified-solutions-architect-associate"
+          },
+          {
+            "id": "6b1c7b5a-d668-48a5-9dfd-e5de1c432c31",
+            "name": "AWS Certified Solutions Architect – Professional",
+            "image": {
+              "id": "2d84e428-9078-49b6-a804-13c15383d0de",
+              "url": "https://images.credly.com/images/2d84e428-9078-49b6-a804-13c15383d0de/image.png"
+            },
+            "image_url": "https://images.credly.com/images/2d84e428-9078-49b6-a804-13c15383d0de/image.png",
+            "url": "https://www.credly.com/org/amazon-web-services/badge/aws-certified-solutions-architect-professional"
+          },
+          {
+            "id": "20f61a9f-06ff-43ad-ada3-b553e0189295",
+            "name": "AWS Certified Data Engineer – Associate",
+            "image": {
+              "id": "e5c85d7f-4e50-431e-b5af-fa9d9b0596e7",
+              "url": "https://images.credly.com/images/e5c85d7f-4e50-431e-b5af-fa9d9b0596e7/image.png"
+            },
+            "image_url": "https://images.credly.com/images/e5c85d7f-4e50-431e-b5af-fa9d9b0596e7/image.png",
+            "url": "https://www.credly.com/org/amazon-web-services/badge/aws-certified-data-engineer-associate"
+          }
+        ],
+        "alignments": [],
+        "badge_template_activities": [
+          {
+            "id": "0120445d-cc83-4cbd-8e43-19fc7d025d35",
+            "activity_type": "Assessment",
+            "required_badge_template_id": null,
+            "title": "Successfully passed the AWS Certified Cloud Practitioner exam.",
+            "url": null
+          }
+        ],
+        "endorsements": [],
+        "skills": [
+          {
+            "id": "682d4927-14e7-490c-96d3-c8f3ef0995de",
+            "name": "AWS",
+            "vanity_slug": "aws"
+          },
+          {
+            "id": "f468a452-e13e-4ca4-ae58-f4131989f1fe",
+            "name": "Cloud Platform",
+            "vanity_slug": "cloud-platform"
+          },
+          {
+            "id": "f056df54-cafe-4713-bdc5-d4ac6734d76c",
+            "name": "Cloud Services",
+            "vanity_slug": "cloud-services"
+          },
+          {
+            "id": "918edc32-0894-4957-a91f-d96300b8b8d3",
+            "name": "AWS Cloud",
+            "vanity_slug": "aws-cloud"
+          },
+          {
+            "id": "c42a5758-3258-4516-9188-5b019ddd1241",
+            "name": "Cloud Certification",
+            "vanity_slug": "cloud-certification"
+          },
+          {
+            "id": "d914920b-ba3e-4220-9b51-957642f3104a",
+            "name": "AWS Certification",
+            "vanity_slug": "aws-certification"
+          },
+          {
+            "id": "f8e4fd7f-3cf6-40bd-95a0-b832e21c2f8f",
+            "name": "Cloud Computing",
+            "vanity_slug": "cloud-computing"
+          },
+          {
+            "id": "87f75c05-6cff-4044-b641-f871a1ea345a",
+            "name": "Amazon Web Services",
+            "vanity_slug": "amazon-web-services"
+          }
+        ]
+      },
+      "image": {
+        "id": "00634f82-b07f-4bbd-a6bb-53de397fc3a6",
+        "url": "https://images.credly.com/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png"
+      },
+      "image_url": "https://images.credly.com/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png",
+      "evidence": [],
+      "recommendations": []
+    },
+
+    {
       "id": "764b1388-e628-428d-ae7f-62317522470c",
       "expires_at_date": null,
       "issued_at_date": "2024-04-12",
@@ -891,189 +1074,6 @@
         "url": "https://images.credly.com/images/f4ccdba9-dd65-4349-baad-8f05df116443/CCNASRWE__1_.png"
       },
       "image_url": "https://images.credly.com/images/f4ccdba9-dd65-4349-baad-8f05df116443/CCNASRWE__1_.png",
-      "evidence": [],
-      "recommendations": []
-    },
-
-    {
-      "id": "828f8da1-a151-4be4-ab7b-8879e028dd7b",
-      "expires_at_date": "2027-07-08",
-      "issued_at_date": "2024-04-03",
-      "issued_to": "ABDEL RAHMAN ALHERBAWI",
-      "locale": "en",
-      "public": true,
-      "state": "accepted",
-      "translate_metadata": false,
-      "accepted_at": "2024-04-03T22:42:16.480+03:00",
-      "expires_at": "2027-07-08T03:00:00.000+03:00",
-      "issued_at": "2024-04-03T03:00:00.000+03:00",
-      "last_updated_at": "2024-07-09T05:16:51.301+03:00",
-      "updated_at": "2024-07-09T05:16:51.301+03:00",
-      "earner_path": "/users/abda616",
-      "earner_photo_url": null,
-      "is_private_badge": false,
-      "user_is_earner": false,
-      "printable": false,
-      "issuer": {
-        "summary": "issued by Amazon Web Services Training and Certification",
-        "entities": [
-          {
-            "label": "Issued by",
-            "primary": true,
-            "entity": {
-              "type": "Organization",
-              "id": "7b741b5c-231d-4925-8041-c64b6846f1c8",
-              "name": "Amazon Web Services Training and Certification",
-              "url": "https://www.credly.com/api/v1/organizations/7b741b5c-231d-4925-8041-c64b6846f1c8",
-              "vanity_url": "https://www.credly.com/org/amazon-web-services",
-              "internationalize_badge_templates": false,
-              "share_to_ziprecruiter": true,
-              "twitter_url": "https://twitter.com/awscloud",
-              "verified": false
-            }
-          }
-        ]
-      },
-      "badge_template": {
-        "id": "6069fb52-0c27-42d7-852b-6aa86ea45e81",
-        "description": "Earners of this certification have a fundamental understanding of IT services and their uses in the AWS Cloud. They demonstrated cloud fluency and foundational AWS knowledge. Badge owners are able to identify essential AWS services necessary to set up AWS-focused projects.",
-        "global_activity_url": "https://aws.amazon.com/certification/certified-cloud-practitioner/",
-        "earn_this_badge_url": null,
-        "enable_earn_this_badge": false,
-        "enable_detail_attribute_visibility": true,
-        "job_board_url": null,
-        "name": "AWS Certified Cloud Practitioner",
-        "public": true,
-        "recipient_type": "User",
-        "vanity_slug": "aws-certified-cloud-practitioner",
-        "show_badge_lmi": true,
-        "show_skill_tag_links": true,
-        "settings_enable_related_badges": true,
-        "translatable": false,
-        "level": "Foundational",
-        "time_to_earn": null,
-        "cost": null,
-        "type_category": "Certification",
-        "image": {
-          "id": "00634f82-b07f-4bbd-a6bb-53de397fc3a6",
-          "url": "https://images.credly.com/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png"
-        },
-        "image_url": "https://images.credly.com/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png",
-        "url": "https://www.credly.com/org/amazon-web-services/badge/aws-certified-cloud-practitioner",
-        "owner_vanity_slug": "amazon-web-services",
-        "badge_template_earnable": false,
-        "recommendable": true,
-        "issuer": {
-          "summary": "issued by Amazon Web Services Training and Certification",
-          "entities": [
-            {
-              "label": "Issued by",
-              "primary": true,
-              "entity": {
-                "type": "Organization",
-                "id": "7b741b5c-231d-4925-8041-c64b6846f1c8",
-                "name": "Amazon Web Services Training and Certification",
-                "url": "https://www.credly.com/api/v1/organizations/7b741b5c-231d-4925-8041-c64b6846f1c8",
-                "vanity_url": "https://www.credly.com/org/amazon-web-services",
-                "internationalize_badge_templates": false,
-                "share_to_ziprecruiter": true,
-                "twitter_url": "https://twitter.com/awscloud",
-                "verified": false
-              }
-            }
-          ]
-        },
-        "related_badge_templates": [
-          {
-            "id": "54225396-3c1a-44b6-ba14-9fe2f812842b",
-            "name": "AWS Certified Solutions Architect – Associate",
-            "image": {
-              "id": "0e284c3f-5164-4b21-8660-0d84737941bc",
-              "url": "https://images.credly.com/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png"
-            },
-            "image_url": "https://images.credly.com/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png",
-            "url": "https://www.credly.com/org/amazon-web-services/badge/aws-certified-solutions-architect-associate"
-          },
-          {
-            "id": "6b1c7b5a-d668-48a5-9dfd-e5de1c432c31",
-            "name": "AWS Certified Solutions Architect – Professional",
-            "image": {
-              "id": "2d84e428-9078-49b6-a804-13c15383d0de",
-              "url": "https://images.credly.com/images/2d84e428-9078-49b6-a804-13c15383d0de/image.png"
-            },
-            "image_url": "https://images.credly.com/images/2d84e428-9078-49b6-a804-13c15383d0de/image.png",
-            "url": "https://www.credly.com/org/amazon-web-services/badge/aws-certified-solutions-architect-professional"
-          },
-          {
-            "id": "20f61a9f-06ff-43ad-ada3-b553e0189295",
-            "name": "AWS Certified Data Engineer – Associate",
-            "image": {
-              "id": "e5c85d7f-4e50-431e-b5af-fa9d9b0596e7",
-              "url": "https://images.credly.com/images/e5c85d7f-4e50-431e-b5af-fa9d9b0596e7/image.png"
-            },
-            "image_url": "https://images.credly.com/images/e5c85d7f-4e50-431e-b5af-fa9d9b0596e7/image.png",
-            "url": "https://www.credly.com/org/amazon-web-services/badge/aws-certified-data-engineer-associate"
-          }
-        ],
-        "alignments": [],
-        "badge_template_activities": [
-          {
-            "id": "0120445d-cc83-4cbd-8e43-19fc7d025d35",
-            "activity_type": "Assessment",
-            "required_badge_template_id": null,
-            "title": "Successfully passed the AWS Certified Cloud Practitioner exam.",
-            "url": null
-          }
-        ],
-        "endorsements": [],
-        "skills": [
-          {
-            "id": "682d4927-14e7-490c-96d3-c8f3ef0995de",
-            "name": "AWS",
-            "vanity_slug": "aws"
-          },
-          {
-            "id": "f468a452-e13e-4ca4-ae58-f4131989f1fe",
-            "name": "Cloud Platform",
-            "vanity_slug": "cloud-platform"
-          },
-          {
-            "id": "f056df54-cafe-4713-bdc5-d4ac6734d76c",
-            "name": "Cloud Services",
-            "vanity_slug": "cloud-services"
-          },
-          {
-            "id": "918edc32-0894-4957-a91f-d96300b8b8d3",
-            "name": "AWS Cloud",
-            "vanity_slug": "aws-cloud"
-          },
-          {
-            "id": "c42a5758-3258-4516-9188-5b019ddd1241",
-            "name": "Cloud Certification",
-            "vanity_slug": "cloud-certification"
-          },
-          {
-            "id": "d914920b-ba3e-4220-9b51-957642f3104a",
-            "name": "AWS Certification",
-            "vanity_slug": "aws-certification"
-          },
-          {
-            "id": "f8e4fd7f-3cf6-40bd-95a0-b832e21c2f8f",
-            "name": "Cloud Computing",
-            "vanity_slug": "cloud-computing"
-          },
-          {
-            "id": "87f75c05-6cff-4044-b641-f871a1ea345a",
-            "name": "Amazon Web Services",
-            "vanity_slug": "amazon-web-services"
-          }
-        ]
-      },
-      "image": {
-        "id": "00634f82-b07f-4bbd-a6bb-53de397fc3a6",
-        "url": "https://images.credly.com/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png"
-      },
-      "image_url": "https://images.credly.com/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png",
       "evidence": [],
       "recommendations": []
     },
