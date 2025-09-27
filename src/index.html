@@ -102,6 +102,25 @@
                             });
                         });
                 </script>
+                <script>
+                    fetch('public_badges.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            const gallery = document.getElementById('badge-gallery');
+                            data.data.forEach(item => {
+                                const link = document.createElement('a');
+                                link.href = item.external_badge.badge_url;
+                                link.target = '_blank'; // Opens link in new tab
+
+                                const img = document.createElement('img');
+                                img.src = item.external_badge.image_url;
+                                img.classList.add('badge-image');
+
+                                link.appendChild(img);
+                                gallery.appendChild(link);
+                            });
+                        });
+                </script>
         </div>
     </div>
 
