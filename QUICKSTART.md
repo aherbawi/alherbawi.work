@@ -1,24 +1,36 @@
-# Quick Start Guide - Updated Certification System
+# Quick Start Guide - Automated Certification System
 
 ## What Changed?
 
-Your website now **automatically fetches** certifications from Credly in real-time! 
+Your website now has **automated monthly badge updates** via GitHub Actions! 
 
 🎉 **No more manual JSON file updates needed!**
 
 ## How to Use
 
 ### For Normal Operation
-**Nothing to do!** Just add certificates to your Credly profile and they'll appear automatically.
+**Nothing to do!** The system automatically updates your badges monthly.
 
 ### When You Add a New Certificate
 1. Earn a new certification on Credly
 2. Make sure it's set to "Public" on your Credly profile
-3. Wait 5 minutes (for caching)
-4. Visit your website - the new certificate appears automatically!
+3. Wait until the first day of the next month (automated update)
+4. Your website will automatically display the new certificate!
+
+Or if you need immediate updates:
+1. Go to GitHub Actions tab
+2. Select "Update Credly Badges Monthly" workflow
+3. Click "Run workflow" to trigger manually
 
 ## How to Verify It's Working
 
+### Check GitHub Actions
+1. Go to your GitHub repository
+2. Click on "Actions" tab
+3. Look for "Update Credly Badges Monthly" workflow
+4. Check the last run status and logs
+
+### Check Your Website
 1. Visit your website: https://alherbawi.work
 2. Open browser console (Press F12)
 3. Reload the page (Ctrl+R or Cmd+R)
@@ -38,15 +50,14 @@ Your website now **automatically fetches** certifications from Credly in real-ti
 
 ## Two Ways Your Badges Load
 
-### 1. Direct from Credly (Best - Real-time)
+### 1. Direct from Credly (First Attempt - Real-time)
 ✅ Fastest
 ✅ Most up-to-date
-✅ Uses proper request headers
 ✅ No intermediary
 
-### 2. From Local Files (Backup - Cached)
+### 2. From Local Files (Fallback - Updated Monthly)
 ✅ Always works
-✅ Shows last cached version
+✅ Shows last cached version (updated monthly by GitHub Actions)
 ✅ Instant loading
 ✅ Used when direct fetch fails
 
@@ -54,22 +65,26 @@ Your website now **automatically fetches** certifications from Credly in real-ti
 
 ```
 alherbawi.work/
+├── .github/
+│   └── workflows/
+│       ├── main.yml             ← Deploys to AWS S3/CloudFront
+│       └── update-badges.yml    ← NEW: Monthly cron job
 ├── src/
-│   ├── index.html          ← Updated with new fetching logic
-│   ├── badge.json          ← Backup/fallback file (keep for now)
-│   └── public_badges.json  ← Backup/fallback file (keep for now)
-├── CERTIFICATION_UPDATE.md ← Full technical documentation
-├── HOW_IT_WORKS.md         ← Visual flow and explanation
-└── QUICKSTART.md           ← This file
+│   ├── index.html               ← Updated with fetching logic
+│   ├── badge.json               ← Auto-updated monthly by GitHub Actions
+│   └── public_badges.json       ← Auto-updated monthly by GitHub Actions
+├── CERTIFICATION_UPDATE.md      ← Full technical documentation
+├── HOW_IT_WORKS.md              ← Visual flow and explanation
+└── QUICKSTART.md                ← This file
 ```
 
 ## Do I Still Need badge.json and public_badges.json?
 
-**Yes, keep them!** They serve as backup/fallback files.
-
-- If Credly API is temporarily down, these files ensure badges still display
-- You can optionally update them periodically, but it's not required
-- They're automatically used as last resort fallback
+**Yes, they're essential!** These files:
+- Are automatically updated monthly by GitHub Actions
+- Serve as fallback when direct Credly API fetch fails
+- Ensure badges always display even during Credly outages
+- Are kept fresh by the automated workflow
 
 ## Troubleshooting
 
@@ -78,59 +93,58 @@ alherbawi.work/
 2. Verify your internet connection
 3. Check if Credly.com is accessible
 4. Clear browser cache and reload
+5. Check that badge.json files exist in src/ directory
 
-### New certificate not showing?
+### New certificate not showing immediately?
 1. Verify it's marked as "Public" on Credly
-2. Wait 5-10 minutes for Credly's cache to update
-3. Hard reload your website (Ctrl+Shift+R)
-4. Check browser console logs
+2. Badges update on the first of every month
+3. For immediate update: Trigger workflow manually on GitHub Actions
+4. Or wait for direct browser fetch to succeed (attempts on every page load)
 
-### Want to test different scenarios?
-1. **Test with internet**: Normal - should use direct fetch
-2. **Test without internet**: Offline - should use local files
-3. **Test with Credly down**: Should gracefully fallback
+### GitHub Actions workflow not running?
+1. Check Actions tab for any errors
+2. Verify workflow file exists: `.github/workflows/update-badges.yml`
+3. Check workflow run history and logs
+4. Ensure repository has write permissions for GitHub Actions
 
-## Updating Fallback Files (Optional)
+## Updating Fallback Files (Automated)
 
-If you want to update the backup JSON files:
+**Good news**: GitHub Actions handles this automatically!
 
-```bash
-# Visit these URLs in your browser:
-1. https://www.credly.com/users/7f90c8d7-ad39-45cf-96bb-31074194eebb/badges?page=1&page_size=48
-   Save as: badge.json
+The workflow runs monthly and:
+1. Fetches latest badge data from Credly API using curl
+2. Updates `badge.json` and `public_badges.json`
+3. Commits and pushes changes
+4. Triggers deployment to AWS S3/CloudFront
 
-2. https://www.credly.com/api/v1/users/7f90c8d7-ad39-45cf-96bb-31074194eebb/external_badges/open_badges/public?page=1&page_size=48
-   Save as: public_badges.json
-
-# Then commit to git:
-git add src/badge.json src/public_badges.json
-git commit -m "Update cached badge data"
-git push
-```
-
-But remember: **This is now optional!** The website fetches from Credly automatically.
+### Manual Update (If Needed)
+To trigger an immediate update:
+1. Go to GitHub repository → Actions tab
+2. Select "Update Credly Badges Monthly"
+3. Click "Run workflow" button
+4. Wait for completion (~1-2 minutes)
 
 ## Benefits Summary
 
 | Before | After |
 |--------|-------|
-| Manual JSON downloads | ✅ Automatic real-time fetch |
+| Manual JSON downloads | ✅ Automated monthly updates |
 | Update every time | ✅ Zero maintenance |
-| Outdated badges | ✅ Always current |
+| Outdated badges | ✅ Always fresh (monthly) |
 | Multiple manual steps | ✅ Set and forget |
-| Deployment required | ✅ No deployment needed |
+| Risk of forgetting | ✅ Automatic cron job |
 
 ## Support
 
 - **Technical Documentation**: See `CERTIFICATION_UPDATE.md`
 - **Visual Guide**: See `HOW_IT_WORKS.md`
-- **Code Changes**: See git commit history
+- **Workflow File**: See `.github/workflows/update-badges.yml`
 
 ## What's Next?
 
-Nothing! It just works. Add certificates to Credly and they appear automatically. 🚀
+Nothing! The system runs automatically. Just focus on earning new certifications! 🚀
 
 ---
 
 **Last Updated**: January 2026
-**Implementation**: Automatic Credly API Integration with Proper Headers and Local Fallback
+**Implementation**: Automated Monthly Updates via GitHub Actions Cron Job

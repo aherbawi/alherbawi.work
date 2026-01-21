@@ -1,0 +1,74 @@
+name: Update Credly Badges Monthly
+
+on:
+  schedule:
+    # Run on the first day of every month at 00:00 UTC
+    - cron: '0 0 1 * *'
+  workflow_dispatch: # Allow manual trigger
+
+env:
+  USER_ID: '7f90c8d7-ad39-45cf-96bb-31074194eebb'
+
+permissions:
+  contents: write  # Required to commit and push changes
+
+jobs:
+  update-badges:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch Credly Badges
+        run: |
+          echo "Fetching badges data..."
+          curl -X GET "https://www.credly.com/users/$USER_ID/badges?page=1&page_size=48" \
+            -H "accept: application/json" \
+            -H "accept-language: en-US,en;q=0.9" \
+            -H "dnt: 1" \
+            -H "priority: u=1, i" \
+            -H "sec-ch-ua: \"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"" \
+            -H "sec-ch-ua-mobile: ?0" \
+            -H "sec-ch-ua-platform: \"Windows\"" \
+            -H "sec-fetch-dest: empty" \
+            -H "sec-fetch-mode: cors" \
+            -H "sec-fetch-site: cross-site" \
+            -H "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" \
+            -o src/badge.json
+          
+          echo "Fetching external badges data..."
+          curl -X GET "https://www.credly.com/api/v1/users/$USER_ID/external_badges/open_badges/public?page=1&page_size=48" \
+            -H "accept: application/json" \
+            -H "accept-language: en-US,en;q=0.9" \
+            -H "dnt: 1" \
+            -H "priority: u=1, i" \
+            -H "sec-ch-ua: \"Google Chrome\";v=\"143\", \"Chromium\";v=\"143\", \"Not A(Brand\";v=\"24\"" \
+            -H "sec-ch-ua-mobile: ?0" \
+            -H "sec-ch-ua-platform: \"Windows\"" \
+            -H "sec-fetch-dest: empty" \
+            -H "sec-fetch-mode: cors" \
+            -H "sec-fetch-site: cross-site" \
+            -H "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" \
+            -o src/public_badges.json
+
+      - name: Check if files were updated
+        id: check_changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Check if there are any changes
+          if git diff --quiet src/badge.json src/public_badges.json; then
+            echo "No changes detected"
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changes detected"
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push if changed
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git add src/badge.json src/public_badges.json
+          git commit -m "chore: Update Credly badges - $(date +'%Y-%m-%d')"
+          git push
