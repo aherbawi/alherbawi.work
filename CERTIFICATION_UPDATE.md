@@ -20,7 +20,7 @@ The updated implementation uses a two-tier approach to fetch certification badge
      - Referer: https://www.credly.com/users/aherbawi/badges
      - Sec-Fetch-Dest: empty
      - Sec-Fetch-Mode: cors
-     - Sec-Fetch-Site: same-origin
+     - Sec-Fetch-Site: cross-site
 
 2. **Local JSON Fallback (Secondary)**
    - If direct fetch fails due to CORS restrictions or network issues, falls back to local cached JSON files
