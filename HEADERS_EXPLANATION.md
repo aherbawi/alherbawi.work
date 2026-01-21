@@ -7,9 +7,10 @@ Updated the fetch request headers to include both `Origin` and `Referer` headers
 ## What Was Changed
 
 In `/src/index.html`, the fetch request now includes:
-- `Origin: https://www.credly.com`
-- `Referer: https://www.credly.com/users/aherbawi/badges`
-- Added `referrerPolicy: 'no-referrer'` to the fetch options
+- `Origin: https://www.credly.com` in the headers object
+- `Referer: https://www.credly.com/users/aherbawi/badges` in the headers object
+
+**Note**: Both of these headers are forbidden headers and will be ignored by the browser.
 
 ## Important Browser Security Restrictions
 
