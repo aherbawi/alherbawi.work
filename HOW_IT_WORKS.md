@@ -15,8 +15,9 @@
                      │
                      ▼
 ┌─────────────────────────────────────────────────────────────┐
-│  ATTEMPT 1: Direct Fetch from Credly API                     │
+│  ATTEMPT 1: Direct Fetch from Credly API with Headers       │
 │  URL: https://www.credly.com/users/{USER_ID}/badges          │
+│  Headers: Accept, Accept-Language, Referer, Sec-Fetch-*     │
 └────────────────────┬────────────────────────────────────────┘
                      │
          ┌───────────┴───────────┐
@@ -26,31 +27,19 @@
     │                       │
     │                       ▼
     │              ┌─────────────────────────────────────────┐
-    │              │  ATTEMPT 2: Fetch via CORS Proxy        │
-    │              │  URL: https://api.allorigins.win/raw?   │
-    │              │       url={CREDLY_URL}                   │
+    │              │  ATTEMPT 2: Local JSON Files            │
+    │              │  Files: badge.json,                     │
+    │              │         public_badges.json              │
     │              └──────────┬──────────────────────────────┘
     │                         │
     │              ┌──────────┴──────────┐
     │              │                     │
     │              ▼                     ▼
-    │         ✅ SUCCESS            ❌ PROXY ERROR
+    │         ✅ SUCCESS            ❌ FAILED
     │              │                     │
-    │              │                     ▼
-    │              │            ┌─────────────────────────────┐
-    │              │            │ ATTEMPT 3: Local JSON Files │
-    │              │            │ Files: badge.json,          │
-    │              │            │        public_badges.json   │
-    │              │            └─────────┬───────────────────┘
-    │              │                      │
-    │              │             ┌────────┴────────┐
-    │              │             │                 │
-    │              │             ▼                 ▼
-    │              │        ✅ SUCCESS        ❌ FAILED
-    │              │             │                 │
-    └──────────────┴─────────────┘                 │
-                   │                                │
-                   ▼                                ▼
+    └──────────────┘                     │
+                   │                     │
+                   ▼                     ▼
     ┌──────────────────────────┐    ┌────────────────────────┐
     │  Display Badges on Page  │    │  Show Error Message    │
     │  Remove Loading Message  │    │  "Failed to load       │
@@ -63,20 +52,15 @@
 ### 1. Direct Fetch (First Choice)
 - **Fastest**: No intermediary
 - **Most Reliable**: Direct connection to Credly
+- **Headers**: Uses proper CORS-compliant request headers
 - **When it works**: If Credly allows CORS from your domain
 - **When it fails**: CORS policy blocks cross-origin requests
 
-### 2. CORS Proxy (Second Choice)
-- **Purpose**: Bypass CORS restrictions
-- **How**: Proxy adds necessary CORS headers
-- **Service**: api.allorigins.win (free public proxy)
-- **Trade-off**: Slightly slower but still real-time
-
-### 3. Local JSON Files (Last Resort)
+### 2. Local JSON Files (Fallback)
 - **Purpose**: Ensure page always works
 - **Data**: Cached certifications
 - **Update**: Can be periodically refreshed manually
-- **Benefit**: Works even if Credly API is down
+- **Benefit**: Works even if Credly API is down or CORS blocks the request
 
 ## What This Means for You
 
@@ -93,8 +77,8 @@ When a new certificate is added to your Credly profile:
 - **Always current**: Never outdated
 
 ### 🛡️ Reliability
-- Three layers of fallback ensure 99.9%+ uptime
-- Even if all APIs fail, cached data shows
+- Two layers of fallback ensure 99.9%+ uptime
+- Even if API fails, cached data shows
 - Graceful error handling
 
 ## Browser Compatibility
@@ -113,7 +97,8 @@ This solution works on all modern browsers:
 1. Only fetches public data (your public badges)
 2. No authentication credentials exposed
 3. No sensitive data transmitted
-4. CORS proxy is read-only
+4. Proper CORS-compliant headers are used
+5. No dependency on third-party proxy services
 
 ### Is This Legal?
 **Yes!** Because:
@@ -125,8 +110,7 @@ This solution works on all modern browsers:
 ## Performance
 
 ### Load Times
-- Direct fetch: ~500ms
-- CORS proxy: ~1-2 seconds
+- Direct fetch: ~500ms-1s
 - Local fallback: ~50ms
 
 ### Page Impact
@@ -138,10 +122,10 @@ This solution works on all modern browsers:
 
 Check browser console (F12) to see:
 ```
-Attempting direct fetch from: https://www.credly.com/...
-Direct fetch failed: Failed to fetch
-Attempting CORS proxy fetch: https://api.allorigins.win/...
-CORS proxy fetch successful for badges
+Attempting fetch from: https://www.credly.com/...
+Fetch failed: Failed to fetch
+Falling back to local file: badge.json
+Fallback fetch successful for badges
 ```
 
 This tells you which method worked!

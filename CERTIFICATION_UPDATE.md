@@ -7,21 +7,23 @@ The website has been updated to automatically fetch certifications from Credly's
 
 ### Client-Side Fetching Strategy
 
-The updated implementation uses a three-tier approach to fetch certification badges:
+The updated implementation uses a two-tier approach to fetch certification badges:
 
-1. **Direct API Call (Primary)**
-   - First, the browser attempts to fetch directly from Credly's API endpoints
+1. **Direct API Call with Proper Headers (Primary)**
+   - First, the browser attempts to fetch directly from Credly's API endpoints with appropriate headers
    - URLs:
      - Regular badges: `https://www.credly.com/users/7f90c8d7-ad39-45cf-96bb-31074194eebb/badges?page=1&page_size=48`
      - External badges: `https://www.credly.com/api/v1/users/7f90c8d7-ad39-45cf-96bb-31074194eebb/external_badges/open_badges/public?page=1&page_size=48`
+   - Headers sent:
+     - Accept: application/json
+     - Accept-Language: en-US,en;q=0.9
+     - Referer: https://www.credly.com/users/aherbawi/badges
+     - Sec-Fetch-Dest: empty
+     - Sec-Fetch-Mode: cors
+     - Sec-Fetch-Site: same-origin
 
-2. **CORS Proxy (Secondary)**
-   - If direct fetch fails due to CORS restrictions, the request is routed through a CORS proxy
-   - Using: `https://api.allorigins.win/raw?url=`
-   - This proxy adds the necessary CORS headers to allow cross-origin requests
-
-3. **Local JSON Fallback (Tertiary)**
-   - If both direct and proxy fetches fail, falls back to local cached JSON files
+2. **Local JSON Fallback (Secondary)**
+   - If direct fetch fails due to CORS restrictions or network issues, falls back to local cached JSON files
    - Files: `badge.json` and `public_badges.json`
    - These files serve as backup and can be periodically updated
 
@@ -32,7 +34,7 @@ User visits alherbawi.work
     ↓
 Page loads with "Loading certifications..." message
     ↓
-JavaScript attempts to fetch from Credly API
+JavaScript attempts to fetch from Credly API with proper headers
     ↓
 ├─ SUCCESS → Displays latest certifications in real-time
 │             No manual update needed!
@@ -63,25 +65,21 @@ The implementation includes:
 ### What is CORS?
 Cross-Origin Resource Sharing (CORS) is a security feature that restricts web pages from making requests to a different domain than the one serving the page. This prevents malicious websites from accessing sensitive data.
 
-### Why Do We Need a CORS Proxy?
-Credly's API endpoints may not include the necessary CORS headers to allow requests from your domain (alherbawi.work). The CORS proxy:
-- Acts as an intermediary between your website and Credly's API
-- Adds the required CORS headers to the response
-- Allows the browser to accept the response
+### How Does This Implementation Handle CORS?
+The implementation attempts to fetch directly from Credly's API with proper request headers that comply with CORS policies. If Credly's API allows the request, the badges load in real-time. If CORS restrictions prevent the fetch, the implementation gracefully falls back to local JSON files.
 
 ### Is This Secure?
 Yes, this approach is secure because:
 - We're only fetching public data (publicly visible badges)
 - No authentication credentials are exposed
-- The CORS proxy (allorigins.win) is a reputable public service
-- Local JSON files serve as a backup if the proxy is unavailable
+- Proper CORS-compliant headers are used
+- Local JSON files serve as a reliable backup
 
 ## Monitoring and Maintenance
 
 ### Browser Console Logs
 The implementation logs all fetch attempts:
-- Direct fetch attempts and results
-- CORS proxy attempts and results
+- Direct fetch attempts with proper headers and results
 - Fallback to local files
 - Any errors encountered
 
@@ -98,24 +96,20 @@ While not required for normal operation, you can update the local JSON files per
 
 This ensures the fallback always has recent data.
 
-## Testing
-
+### Fallback Testing
 To test the implementation:
 
 1. **Normal Operation**: Simply visit the website and verify badges load
 2. **Network Tab**: Open browser DevTools → Network tab to see fetch requests
 3. **Console**: Check console logs to see which fetch method succeeded
-4. **Fallback Testing**: Temporarily rename local JSON files to test proxy behavior
+4. **Fallback Testing**: Temporarily block Credly domain to test fallback behavior
 
-## Alternative CORS Proxies
+## Troubleshooting
 
-If `api.allorigins.win` becomes unavailable, you can switch to alternatives:
-
-- `https://corsproxy.io/?`
-- `https://cors-anywhere.herokuapp.com/`
-- `https://api.codetabs.com/v1/proxy?quest=`
-
-Simply update the `CORS_PROXY` constant in the script.
+If badges don't load from the API:
+- Check browser console for CORS errors
+- Verify that local JSON files (badge.json and public_badges.json) are present and up to date
+- The fallback mechanism ensures badges always display from local files when API fetch fails
 
 ## Future Enhancements
 

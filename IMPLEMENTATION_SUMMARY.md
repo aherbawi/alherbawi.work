@@ -31,17 +31,17 @@ Successfully implemented automatic certification fetching from Credly's API, eli
 
 ## Key Features
 
-### Three-Tier Fetching Strategy
+### Two-Tier Fetching Strategy
 ```
-1. Direct API Fetch
-   ↓ (if CORS blocked)
-2. CORS Proxy (api.allorigins.win)
-   ↓ (if proxy fails)
-3. Local JSON Files (badge.json, public_badges.json)
+1. Direct API Fetch with Proper Headers
+   ↓ (if CORS blocked or network error)
+2. Local JSON Files (badge.json, public_badges.json)
 ```
 
 ### Improvements
 - ✅ Automatic real-time updates from Credly
+- ✅ Proper request headers for CORS compliance
+- ✅ No dependency on third-party CORS proxy services
 - ✅ Loading states: "Loading certifications..."
 - ✅ Duplicate prevention (Set-based tracking)
 - ✅ Detailed console logging for debugging
@@ -57,22 +57,21 @@ When a user visits `alherbawi.work`:
    - HTML displays with "Loading certifications..." message
    - JavaScript begins execution
 
-2. **First Attempt - Direct Fetch**
+2. **First Attempt - Direct Fetch with Headers**
    ```javascript
-   fetch('https://www.credly.com/users/{USER_ID}/badges')
+   fetch('https://www.credly.com/users/{USER_ID}/badges', {
+     headers: {
+       'Accept': 'application/json',
+       'Accept-Language': 'en-US,en;q=0.9',
+       'Referer': 'https://www.credly.com/users/aherbawi/badges',
+       // ... additional headers
+     }
+   })
    ```
    - If successful: Display latest badges (fastest)
    - If CORS blocked: Continue to step 3
 
-3. **Second Attempt - CORS Proxy**
-   ```javascript
-   fetch('https://api.allorigins.win/raw?url={CREDLY_URL}')
-   ```
-   - Proxy adds CORS headers
-   - If successful: Display latest badges
-   - If fails: Continue to step 4
-
-4. **Third Attempt - Local Fallback**
+3. **Second Attempt - Local Fallback**
    ```javascript
    fetch('badge.json')
    fetch('public_badges.json')
@@ -102,8 +101,7 @@ The implementation fetches from these public Credly endpoints:
 ## Testing Results
 
 ### ✅ Functional Testing
-- Direct fetch attempted correctly
-- CORS proxy fallback works when needed
+- Direct fetch attempted correctly with proper headers
 - Local JSON fallback successful
 - All 10 certifications displayed correctly
 - Loading states work properly
@@ -153,10 +151,9 @@ To verify it's working:
 3. Reload https://alherbawi.work
 4. Look for messages:
    ```
-   Attempting direct fetch from: https://www.credly.com/...
+   Attempting fetch from: https://www.credly.com/...
    [One of these:]
-   - Direct fetch successful for badges
-   - CORS proxy fetch successful for badges
+   - Fetch successful for badges
    - Fallback fetch successful for badges
    ```
 
@@ -212,7 +209,7 @@ All requirements met:
 
 ✅ **Primary Goal**: Eliminate manual JSON file updates
 ✅ **Real-time**: Fetch from Credly API directly
-✅ **CORS Handling**: Implemented proxy fallback
+✅ **CORS Handling**: Proper request headers for CORS compliance
 ✅ **Reliability**: Three-tier fallback system
 ✅ **UX**: Loading states and error messages
 ✅ **Compatibility**: Works on all modern browsers
@@ -222,9 +219,7 @@ All requirements met:
 
 ## Commits
 
-1. **3bd9e8f**: Update certification fetching to use Credly API with CORS proxy and fallback
-2. **1fed7cc**: Fix redundant ternary operator and add comprehensive documentation
-3. **b00f357**: Add quick start guide for users
+1. **Updated commits**: Remove CORS proxy and use proper request headers for Credly API
 
 ## Lines Changed
 
@@ -242,7 +237,6 @@ The system is fully automated and requires no regular maintenance.
 ### Optional Maintenance
 - Update local JSON files quarterly for better fallback data
 - Monitor console logs occasionally to ensure fetching works
-- Update CORS proxy URL if api.allorigins.win becomes unavailable
 
 ### If Issues Arise
 1. Check CERTIFICATION_UPDATE.md for troubleshooting
