@@ -17,7 +17,8 @@
 ┌─────────────────────────────────────────────────────────────┐
 │  ATTEMPT 1: Direct Fetch from Credly API with Headers       │
 │  URL: https://www.credly.com/users/{USER_ID}/badges          │
-│  Headers: Accept, Accept-Language, Referer, Sec-Fetch-*     │
+│  Headers: Accept, Accept-Language, Referer                   │
+│  (Sec-Fetch-* headers are automatically set by browser)      │
 └────────────────────┬────────────────────────────────────────┘
                      │
          ┌───────────┴───────────┐
