@@ -24,27 +24,31 @@ Your website now **automatically fetches** certifications from Credly in real-ti
 3. Reload the page (Ctrl+R or Cmd+R)
 4. Look for messages like:
    ```
-   Attempting direct fetch from: https://www.credly.com/...
-   CORS proxy fetch successful for badges
+   Attempting fetch from: https://www.credly.com/...
+   Fetch successful for badges
+   ```
+   Or if the direct fetch fails:
+   ```
+   Attempting fetch from: https://www.credly.com/...
+   Fetch failed: Failed to fetch
+   Falling back to local file: badge.json
+   Fallback fetch successful for badges
    ```
 5. You'll see which method successfully loaded your badges
 
-## Three Ways Your Badges Load
+## Two Ways Your Badges Load
 
 ### 1. Direct from Credly (Best - Real-time)
 ✅ Fastest
 ✅ Most up-to-date
+✅ Uses proper request headers
 ✅ No intermediary
 
-### 2. Via CORS Proxy (Good - Real-time)
-✅ Still real-time
-✅ Slightly slower but reliable
-✅ Bypasses CORS restrictions
-
-### 3. From Local Files (Backup - Cached)
+### 2. From Local Files (Backup - Cached)
 ✅ Always works
 ✅ Shows last cached version
 ✅ Instant loading
+✅ Used when direct fetch fails
 
 ## File Structure
 
@@ -82,7 +86,7 @@ alherbawi.work/
 4. Check browser console logs
 
 ### Want to test different scenarios?
-1. **Test with internet**: Normal - should use direct/proxy fetch
+1. **Test with internet**: Normal - should use direct fetch
 2. **Test without internet**: Offline - should use local files
 3. **Test with Credly down**: Should gracefully fallback
 
@@ -129,4 +133,4 @@ Nothing! It just works. Add certificates to Credly and they appear automatically
 ---
 
 **Last Updated**: January 2026
-**Implementation**: Automatic Credly API Integration with CORS Proxy and Local Fallback
+**Implementation**: Automatic Credly API Integration with Proper Headers and Local Fallback
