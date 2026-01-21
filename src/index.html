@@ -107,7 +107,7 @@
                     
                     // Function to create and append badge element
                     function addBadgeToGallery(badgeData, isExternalBadge = false) {
-                        const badgeId = isExternalBadge ? badgeData.id : badgeData.id;
+                        const badgeId = badgeData.id;
                         
                         // Skip if already added
                         if (loadedBadgeIds.has(badgeId)) return;
