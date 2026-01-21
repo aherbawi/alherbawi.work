@@ -72,3 +72,10 @@ jobs:
           git add src/badge.json src/public_badges.json
           git commit -m "chore: Update Credly badges - $(date +'%Y-%m-%d')"
           git push
+
+      - name: Trigger deployment workflow
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          gh workflow run main.yml
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
