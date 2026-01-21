@@ -87,16 +87,9 @@
             </div>
 
                 <script>
-                    // Configuration
-                    const USER_ID = '7f90c8d7-ad39-45cf-96bb-31074194eebb';
-                    
-                    // API endpoints
-                    const CREDLY_BADGES_URL = `https://www.credly.com/users/${USER_ID}/badges?page=1&page_size=48`;
-                    const CREDLY_EXTERNAL_BADGES_URL = `https://www.credly.com/api/v1/users/${USER_ID}/external_badges/open_badges/public?page=1&page_size=48`;
-                    
-                    // Fallback to local JSON files
-                    const FALLBACK_BADGES = 'badge.json';
-                    const FALLBACK_EXTERNAL_BADGES = 'public_badges.json';
+                    // Local badge files
+                    const BADGES_FILE = 'badge.json';
+                    const EXTERNAL_BADGES_FILE = 'public_badges.json';
                     
                     const gallery = document.getElementById('badge-gallery');
                     const loadingMessage = document.getElementById('loading-message');
@@ -131,73 +124,34 @@
                         gallery.appendChild(link);
                     }
                     
-                    // Function to fetch with proper headers and fallback
-                    async function fetchWithFallback(primaryUrl, fallbackUrl, isExternalBadge = false) {
-                        try {
-                            // Try direct fetch with proper headers
-                            console.log(`Attempting fetch from: ${primaryUrl}`);
-                            
-                            const headers = {
-                                'Accept': 'application/json',
-                                'Accept-Language': 'en-US,en;q=0.9'
-                            };
-                            
-                            let response = await fetch(primaryUrl, {
-                                method: 'GET',
-                                headers: headers,
-                                credentials: 'omit',
-                                mode: 'cors'
-                            });
-                            
-                            if (!response.ok) {
-                                throw new Error(`Fetch failed with status: ${response.status}`);
-                            }
-                            
-                            const data = await response.json();
-                            console.log(`Fetch successful for ${isExternalBadge ? 'external badges' : 'badges'}`);
-                            return data;
-                        } catch (fetchError) {
-                            console.log(`Fetch failed: ${fetchError.message}`);
-                            
-                            // Fallback to local JSON file
-                            console.log(`Falling back to local file: ${fallbackUrl}`);
-                            try {
-                                let response = await fetch(fallbackUrl);
-                                
-                                if (!response.ok) {
-                                    throw new Error(`Fallback fetch failed with status: ${response.status}`);
-                                }
-                                
-                                const data = await response.json();
-                                console.log(`Fallback fetch successful for ${isExternalBadge ? 'external badges' : 'badges'}`);
-                                return data;
-                            } catch (fallbackError) {
-                                console.error(`All fetch attempts failed: ${fallbackError.message}`);
-                                throw fallbackError;
-                            }
-                        }
-                    }
-                    
-                    // Load all badges
+                    // Load all badges from local files
                     async function loadAllBadges() {
                         try {
                             // Load regular badges
-                            const badgesData = await fetchWithFallback(
-                                CREDLY_BADGES_URL,
-                                FALLBACK_BADGES,
-                                false
-                            );
+                            console.log(`Loading badges from: ${BADGES_FILE}`);
+                            const badgesResponse = await fetch(BADGES_FILE);
+                            
+                            if (!badgesResponse.ok) {
+                                throw new Error(`Failed to load ${BADGES_FILE}`);
+                            }
+                            
+                            const badgesData = await badgesResponse.json();
+                            console.log('Badges loaded successfully');
                             
                             if (badgesData && badgesData.data) {
                                 badgesData.data.forEach(item => addBadgeToGallery(item, false));
                             }
                             
                             // Load external badges
-                            const externalBadgesData = await fetchWithFallback(
-                                CREDLY_EXTERNAL_BADGES_URL,
-                                FALLBACK_EXTERNAL_BADGES,
-                                true
-                            );
+                            console.log(`Loading external badges from: ${EXTERNAL_BADGES_FILE}`);
+                            const externalBadgesResponse = await fetch(EXTERNAL_BADGES_FILE);
+                            
+                            if (!externalBadgesResponse.ok) {
+                                throw new Error(`Failed to load ${EXTERNAL_BADGES_FILE}`);
+                            }
+                            
+                            const externalBadgesData = await externalBadgesResponse.json();
+                            console.log('External badges loaded successfully');
                             
                             if (externalBadgesData && externalBadgesData.data) {
                                 externalBadgesData.data.forEach(item => addBadgeToGallery(item, true));
