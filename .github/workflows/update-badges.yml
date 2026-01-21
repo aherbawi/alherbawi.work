@@ -11,6 +11,7 @@ env:
 
 permissions:
   contents: write  # Required to commit and push changes
+  actions: write   # Required to trigger other workflows
 
 jobs:
   update-badges:
