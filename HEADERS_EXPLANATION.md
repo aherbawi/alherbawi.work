@@ -28,9 +28,9 @@ In `/src/index.html`, the fetch request now includes:
 
 - JavaScript cannot set arbitrary `Referer` values through the `headers` object
 - The browser controls this header for security reasons
-- We've added `referrerPolicy: 'no-referrer'` which instructs the browser to **not send** a Referer header at all
+- The browser will send its own referer based on the current page URL
 
-**What Actually Gets Sent**: No `Referer` header (due to `referrerPolicy: 'no-referrer'`)
+**What Actually Gets Sent**: `Referer: https://alherbawi.work/` (or similar, based on the actual page URL)
 
 ## Why These Headers Are in the Code
 
@@ -49,11 +49,12 @@ The only way to truly control `Origin` and `Referer` headers is:
 ## Current Behavior
 
 When the fetch request is made:
-1. The JavaScript attempts to set `Origin` and `Referer` headers
-2. Browser **ignores** the `Origin` header and sets it to the actual page origin
-3. Browser **doesn't send** the `Referer` header (due to `referrerPolicy: 'no-referrer'`)
-4. Other headers (`Accept`, `Accept-Language`) are sent correctly
-5. The request either succeeds or falls back to local JSON files
+1. The JavaScript attempts to set `Origin` and `Referer` headers to Credly values
+2. Browser **ignores** both headers and sets its own values:
+   - `Origin`: Set to the actual page origin (e.g., `https://alherbawi.work`)
+   - `Referer`: Set to the actual page URL (e.g., `https://alherbawi.work/` or similar)
+3. Other headers (`Accept`, `Accept-Language`) are sent correctly
+4. The request either succeeds or falls back to local JSON files
 
 ## CORS and API Requests
 
@@ -70,7 +71,7 @@ The Credly API's CORS policy determines whether the request succeeds:
 ## Conclusion
 
 The code has been updated as requested to include `Origin` and `Referer` headers pointing to Credly's domain. However, due to browser security restrictions, the actual headers sent in the request will be controlled by the browser:
-- **Origin**: Will be the actual page origin (alherbawi.work)
-- **Referer**: Will not be sent (suppressed by referrerPolicy)
+- **Origin**: Will be the actual page origin (e.g., `https://alherbawi.work`)
+- **Referer**: Will be the actual page URL (e.g., `https://alherbawi.work/`)
 
 This is standard browser behavior and cannot be circumvented from client-side JavaScript for security reasons.

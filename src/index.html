@@ -138,8 +138,10 @@
                             console.log(`Attempting fetch from: ${primaryUrl}`);
                             
                             // Note: Setting Origin and Referer headers to match Credly's domain
-                            // Origin header will be ignored by browser (security restriction)
-                            // but we include it in the headers object as requested
+                            // These are FORBIDDEN HEADERS - browsers will ignore them (security restriction)
+                            // - Origin: Browser will set it to the actual page origin (alherbawi.work)
+                            // - Referer: Browser will set it to the actual page URL or suppress it
+                            // We include them here as requested, but they won't have the desired effect
                             const headers = {
                                 'Accept': 'application/json',
                                 'Accept-Language': 'en-US,en;q=0.9',
@@ -151,8 +153,7 @@
                                 method: 'GET',
                                 headers: headers,
                                 credentials: 'omit',
-                                mode: 'cors',
-                                referrerPolicy: 'no-referrer'
+                                mode: 'cors'
                             });
                             
                             if (!response.ok) {
