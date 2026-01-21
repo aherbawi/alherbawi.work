@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch: # Allow manual trigger
 
 env:
   CLOUDFRONT_DISTRIBUTION_ID: E2U7L3AC9HLAQ0
