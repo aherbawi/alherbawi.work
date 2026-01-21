@@ -81,45 +81,149 @@
             <h2>Certifications</h2>
             <div id="badge-gallery">
                 <!-- Badges will be loaded here by JavaScript -->
+                <div id="loading-message" style="text-align: center; padding: 20px; color: #666;">
+                    Loading certifications...
+                </div>
             </div>
 
                 <script>
-                    fetch('badge.json')
-                        .then(response => response.json())
-                        .then(data => {
-                            const gallery = document.getElementById('badge-gallery');
-                            data.data.forEach(item => {
-                                const link = document.createElement('a');
-                                link.href = `https://www.credly.com/badges/${item.id}`;
-                                link.target = '_blank'; // Opens link in new tab
-
-                                const img = document.createElement('img');
-                                img.src = item.image_url;
-                                img.classList.add('badge-image');
-
-                                link.appendChild(img);
-                                gallery.appendChild(link);
-                            });
-                        });
-                </script>
-                <script>
-                    fetch('public_badges.json')
-                        .then(response => response.json())
-                        .then(data => {
-                            const gallery = document.getElementById('badge-gallery');
-                            data.data.forEach(item => {
-                                const link = document.createElement('a');
-                                link.href = item.external_badge.badge_url;
-                                link.target = '_blank'; // Opens link in new tab
-
-                                const img = document.createElement('img');
-                                img.src = item.external_badge.image_url;
-                                img.classList.add('badge-image');
-
-                                link.appendChild(img);
-                                gallery.appendChild(link);
-                            });
-                        });
+                    // Configuration
+                    const USER_ID = '7f90c8d7-ad39-45cf-96bb-31074194eebb';
+                    const CORS_PROXY = 'https://api.allorigins.win/raw?url=';
+                    
+                    // API endpoints
+                    const CREDLY_BADGES_URL = `https://www.credly.com/users/${USER_ID}/badges?page=1&page_size=48`;
+                    const CREDLY_EXTERNAL_BADGES_URL = `https://www.credly.com/api/v1/users/${USER_ID}/external_badges/open_badges/public?page=1&page_size=48`;
+                    
+                    // Fallback to local JSON files
+                    const FALLBACK_BADGES = 'badge.json';
+                    const FALLBACK_EXTERNAL_BADGES = 'public_badges.json';
+                    
+                    const gallery = document.getElementById('badge-gallery');
+                    const loadingMessage = document.getElementById('loading-message');
+                    
+                    // Track loaded badges to avoid duplicates
+                    const loadedBadgeIds = new Set();
+                    
+                    // Function to create and append badge element
+                    function addBadgeToGallery(badgeData, isExternalBadge = false) {
+                        const badgeId = isExternalBadge ? badgeData.id : badgeData.id;
+                        
+                        // Skip if already added
+                        if (loadedBadgeIds.has(badgeId)) return;
+                        loadedBadgeIds.add(badgeId);
+                        
+                        const link = document.createElement('a');
+                        const img = document.createElement('img');
+                        
+                        if (isExternalBadge) {
+                            link.href = badgeData.external_badge.badge_url;
+                            img.src = badgeData.external_badge.image_url;
+                        } else {
+                            link.href = `https://www.credly.com/badges/${badgeData.id}`;
+                            img.src = badgeData.image_url;
+                        }
+                        
+                        link.target = '_blank';
+                        img.classList.add('badge-image');
+                        img.alt = isExternalBadge ? badgeData.external_badge.badge_name : (badgeData.badge_template?.name || 'Badge');
+                        
+                        link.appendChild(img);
+                        gallery.appendChild(link);
+                    }
+                    
+                    // Function to fetch with CORS proxy and fallback
+                    async function fetchWithFallback(primaryUrl, fallbackUrl, isExternalBadge = false) {
+                        try {
+                            // Try direct fetch first (will work if CORS is allowed)
+                            console.log(`Attempting direct fetch from: ${primaryUrl}`);
+                            let response = await fetch(primaryUrl);
+                            
+                            if (!response.ok) {
+                                throw new Error(`Direct fetch failed with status: ${response.status}`);
+                            }
+                            
+                            const data = await response.json();
+                            console.log(`Direct fetch successful for ${isExternalBadge ? 'external badges' : 'badges'}`);
+                            return data;
+                        } catch (directError) {
+                            console.log(`Direct fetch failed: ${directError.message}`);
+                            
+                            try {
+                                // Try with CORS proxy
+                                console.log(`Attempting CORS proxy fetch: ${CORS_PROXY}${encodeURIComponent(primaryUrl)}`);
+                                let response = await fetch(CORS_PROXY + encodeURIComponent(primaryUrl));
+                                
+                                if (!response.ok) {
+                                    throw new Error(`CORS proxy fetch failed with status: ${response.status}`);
+                                }
+                                
+                                const data = await response.json();
+                                console.log(`CORS proxy fetch successful for ${isExternalBadge ? 'external badges' : 'badges'}`);
+                                return data;
+                            } catch (proxyError) {
+                                console.log(`CORS proxy fetch failed: ${proxyError.message}`);
+                                
+                                // Fallback to local JSON file
+                                console.log(`Falling back to local file: ${fallbackUrl}`);
+                                let response = await fetch(fallbackUrl);
+                                
+                                if (!response.ok) {
+                                    throw new Error(`Fallback fetch failed with status: ${response.status}`);
+                                }
+                                
+                                const data = await response.json();
+                                console.log(`Fallback fetch successful for ${isExternalBadge ? 'external badges' : 'badges'}`);
+                                return data;
+                            }
+                        }
+                    }
+                    
+                    // Load all badges
+                    async function loadAllBadges() {
+                        try {
+                            // Load regular badges
+                            const badgesData = await fetchWithFallback(
+                                CREDLY_BADGES_URL,
+                                FALLBACK_BADGES,
+                                false
+                            );
+                            
+                            if (badgesData && badgesData.data) {
+                                badgesData.data.forEach(item => addBadgeToGallery(item, false));
+                            }
+                            
+                            // Load external badges
+                            const externalBadgesData = await fetchWithFallback(
+                                CREDLY_EXTERNAL_BADGES_URL,
+                                FALLBACK_EXTERNAL_BADGES,
+                                true
+                            );
+                            
+                            if (externalBadgesData && externalBadgesData.data) {
+                                externalBadgesData.data.forEach(item => addBadgeToGallery(item, true));
+                            }
+                            
+                            // Remove loading message
+                            if (loadingMessage) {
+                                loadingMessage.remove();
+                            }
+                            
+                            // Show message if no badges loaded
+                            if (loadedBadgeIds.size === 0) {
+                                gallery.innerHTML = '<p style="text-align: center; padding: 20px; color: #666;">No certifications found.</p>';
+                            }
+                        } catch (error) {
+                            console.error('Error loading badges:', error);
+                            if (loadingMessage) {
+                                loadingMessage.innerHTML = 'Failed to load certifications. Please try again later.';
+                                loadingMessage.style.color = '#d00';
+                            }
+                        }
+                    }
+                    
+                    // Start loading badges when page loads
+                    loadAllBadges();
                 </script>
         </div>
     </div>
