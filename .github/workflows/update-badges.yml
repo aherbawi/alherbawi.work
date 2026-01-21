@@ -9,6 +9,9 @@ on:
 env:
   USER_ID: '7f90c8d7-ad39-45cf-96bb-31074194eebb'
 
+permissions:
+  contents: write  # Required to commit and push changes
+
 jobs:
   update-badges:
     runs-on: ubuntu-latest
