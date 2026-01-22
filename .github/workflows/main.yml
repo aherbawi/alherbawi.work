@@ -3,14 +3,29 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch: # Allow manual trigger
-
-env:
-  CLOUDFRONT_DISTRIBUTION_ID: E2U7L3AC9HLAQ0
+  workflow_dispatch: # Allow manual trigger and provide optional overrides
+    inputs:
+      s3_bucket:
+        description: 'S3 bucket name (optional — overrides secret)'
+        required: false
+        default: ''
+      cloudfront_distribution_id:
+        description: 'CloudFront distribution ID (optional — overrides secret)'
+        required: false
+        default: ''
+      aws_region:
+        description: 'AWS region (optional — overrides default/secrets)'
+        required: false
+        default: 'eu-north-1'
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      S3_BUCKET: ${{ github.event.inputs.s3_bucket || secrets.S3_BUCKET || 'alherbawi.work' }}
+      CLOUDFRONT_DISTRIBUTION_ID: ${{ github.event.inputs.cloudfront_distribution_id || secrets.CLOUDFRONT_DISTRIBUTION_ID || '' }}
+      AWS_REGION: ${{ github.event.inputs.aws_region || secrets.AWS_REGION || 'eu-north-1' }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -20,12 +35,28 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: eu-north-1
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Show deployment targets (non-sensitive)
+        run: |
+          echo "S3 bucket: $S3_BUCKET"
+          if [ -z "$CLOUDFRONT_DISTRIBUTION_ID" ]; then
+            echo "CloudFront distribution ID: (not set — invalidation will be skipped)"
+          else
+            echo "CloudFront distribution ID: $CLOUDFRONT_DISTRIBUTION_ID"
+          fi
 
       - name: Deploy static site to S3 bucket
-        run: aws s3 sync src/ s3://alherbawi.work --delete
+        run: aws s3 sync src/ "s3://$S3_BUCKET" --delete
 
-      - name: 'Invalidate CloudFront cache'
+      - name: Invalidate CloudFront cache
+        if: ${{ env.CLOUDFRONT_DISTRIBUTION_ID }}
         run: |
-          aws cloudfront create-invalidation --distribution-id ${{ env.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*" && \
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ env.CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths "/*" && \
           echo "Frontend deployed successfully to S3 and CloudFront cache invalidation initiated"
+
+      - name: Skip CloudFront invalidation (no distribution set)
+        if: ${{ !env.CLOUDFRONT_DISTRIBUTION_ID }}
+        run: echo "No CloudFront distribution ID provided; skipping invalidation."
