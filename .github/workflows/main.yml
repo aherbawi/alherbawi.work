@@ -16,15 +16,15 @@ on:
       aws_region:
         description: 'AWS region (optional — overrides default/secrets)'
         required: false
-        default: 'eu-north-1'
+        default: ''
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
-      S3_BUCKET: ${{ github.event.inputs.s3_bucket || secrets.S3_BUCKET || 'alherbawi.work' }}
+      S3_BUCKET: ${{ github.event.inputs.s3_bucket || secrets.S3_BUCKET }}
       CLOUDFRONT_DISTRIBUTION_ID: ${{ github.event.inputs.cloudfront_distribution_id || secrets.CLOUDFRONT_DISTRIBUTION_ID || '' }}
-      AWS_REGION: ${{ github.event.inputs.aws_region || secrets.AWS_REGION || 'eu-north-1' }}
+      AWS_REGION: ${{ github.event.inputs.aws_region || secrets.AWS_REGION }}
 
     steps:
       - name: Checkout
